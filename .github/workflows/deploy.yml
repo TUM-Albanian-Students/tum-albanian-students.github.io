@@ -1,0 +1,28 @@
+name: Deploy Site
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 * * * *' 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout main repo + submodules
+      uses: actions/checkout@v4
+      with:
+        submodules: 'recursive'
+        ssh-key: |
+          ${{ secrets.WEBSITE_CONTENT_DEPLOY_KEY }}
+        
+    - name: Build Site
+      run: |
+        bundle install
+        bundle exec jekyll build
+        
+    - name: Deploy to GH Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site 
