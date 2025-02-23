@@ -38,9 +38,10 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-      - name: Clone private submodule
+      - name: Ensure fresh clone of private repository
         run: |
-          git submodule update --init --recursive
+          rm -rf external_content  # Delete old version if exists
+          git clone --depth=1 git@github.com:tum-albanian-students/website-content.git external_content
 
       - name: Move members' markdown files and images from external repo to root
         run: |
