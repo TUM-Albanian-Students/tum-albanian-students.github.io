@@ -4,7 +4,9 @@ title: Members
 permalink: /members/
 ---
 
-Listed degrees are being pursued by members.
+<div style="text-align: center; font-size: 0.9em; color: #666; margin-bottom: 15px;">
+  Listed degrees are being pursued by members.
+</div>
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
   {% assign sorted_members = site.members | sort: "name" | reverse %}
