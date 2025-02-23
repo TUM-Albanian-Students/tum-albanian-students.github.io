@@ -5,7 +5,6 @@ permalink: /members/
 ---
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-  <br>Listed degrees are being pursued by members.</br>
   {% assign sorted_members = site.members | sort: "name" | reverse %}
   {% for member in sorted_members %}
     <div class="member-card">
