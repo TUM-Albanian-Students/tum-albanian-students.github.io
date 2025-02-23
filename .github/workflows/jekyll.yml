@@ -48,7 +48,7 @@ jobs:
           mkdir -p assets/images/members  # Ensure the images folder exists
           
           cp -r external_content/_members/* _members/
-          cp -r external_content/images/members/* assets/images/members/
+          cp -r external_content/assets/images/members/* assets/images/members/
 
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
