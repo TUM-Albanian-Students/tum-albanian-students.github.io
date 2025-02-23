@@ -4,7 +4,9 @@ title: What's New
 list_title: Latest Updates
 ---
 
-Welcome to the TUM Albanian Student Society! Here you'll find our latest news, events, and updates.
+<div style="text-align: center; font-size: 0.9em; color: #666; margin-bottom: 15px;">
+    Welcome to the TUM Albanian Student Society! Here you'll find our latest news, events, and updates.
+</div>
 
 {% if site.posts.size > 0 %}
 <div class="post-list">
