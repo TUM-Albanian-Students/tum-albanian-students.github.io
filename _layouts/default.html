@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="{{ '/' | relative_url }}" class="logo">
+                <img src="/assets/logo-text.png" alt="Club Logo">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="{{ '/whats-new' | relative_url }}">What's New</a></li>
+                    <li><a href="{{ '/members' | relative_url }}">Members</a></li>
+                    <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                </ul>
+            </nav>
+            <a href="{{ '/' | relative_url }}" class="logo">
+                <img src="/assets/logo.png" alt="Club Logo">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} TUM Albanian Student Society</p>
+    </footer>
+</body>
+
+</html>
