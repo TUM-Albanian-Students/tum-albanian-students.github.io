@@ -33,6 +33,22 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Sass/SCSS configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Set proper asset paths
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+  - scope:
+      path: "assets/css"
+    values:
+      css: true
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
