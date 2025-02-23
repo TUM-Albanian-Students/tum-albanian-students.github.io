@@ -6,3 +6,7 @@ vendor
 Gemfile.lock
 
 .DS_Store
+
+_members/
+
+assets/images/members/

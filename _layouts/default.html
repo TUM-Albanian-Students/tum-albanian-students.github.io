@@ -7,6 +7,7 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -18,8 +19,9 @@
             <nav class="main-nav">
                 <ul class="nav-links">
                     <li><a href="{{ '/' | relative_url }}">What's New</a></li>
-                    <li><a href="{{ '/members' | relative_url }}">Members</a></li>
                     <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                    <li><a href="{{ '/members' | relative_url }}">Members</a></li>
+                    <li><a href="/join" class="join-link">Join Us</a></li>
                 </ul>
             </nav>
             <a href="{{ '/' | relative_url }}" class="logo">
@@ -33,6 +35,14 @@
     </main>
 
     <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/tumalbaniansociety" target="_blank" rel="noopener">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/tum-albanian-students" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
         <p>&copy; {{ site.time | date: '%Y' }} TUM Albanian Student Society</p>
     </footer>
 </body>

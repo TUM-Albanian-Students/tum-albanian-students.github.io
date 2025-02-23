@@ -5,7 +5,8 @@ permalink: /members/
 ---
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-  {% for member in site.members %}
+  {% assign sorted_members = site.members | sort: "name" | reverse %}
+  {% for member in sorted_members %}
     <div class="member-card">
       {% if member.image %}
         <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" class="member-image">
