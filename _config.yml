@@ -42,7 +42,6 @@ collections:
   members:
     output: true
     permalink: /members/:name
-    source: external_content/_members
 
 header_pages:
   - about.md

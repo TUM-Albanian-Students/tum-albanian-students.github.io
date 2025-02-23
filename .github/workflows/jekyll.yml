@@ -42,6 +42,11 @@ jobs:
         run: |
           git submodule update --init --recursive
 
+      - name: Move members from external repo to root
+        run: |
+          mkdir -p _members
+          cp -r external_content/_members/* _members/
+
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
