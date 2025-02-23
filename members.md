@@ -4,6 +4,8 @@ title: Members
 permalink: /members/
 ---
 
+Listed degrees are being pursued by members.
+
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
   {% assign sorted_members = site.members | sort: "name" | reverse %}
   {% for member in sorted_members %}
