@@ -42,10 +42,13 @@ jobs:
         run: |
           git submodule update --init --recursive
 
-      - name: Move members from external repo to root
+      - name: Move members' markdown files and images from external repo to root
         run: |
           mkdir -p _members
+          mkdir -p assets/images/members  # Ensure the images folder exists
+          
           cp -r external_content/_members/* _members/
+          cp -r external_content/images/members/* assets/images/members/
 
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
