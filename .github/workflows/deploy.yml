@@ -12,9 +12,8 @@ jobs:
     - name: Checkout main repo + submodules
       uses: actions/checkout@v4
       with:
-        submodules: 'recursive'
-        ssh-key: |
-          ${{ secrets.WEBSITE_CONTENT_DEPLOY_KEY }}
+        submodules: recursive
+        ssh-key: ${{ secrets.WEBSITE_CONTENT_DEPLOY_KEY }}
         
     - name: Build Site
       run: |
