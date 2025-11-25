@@ -1,0 +1,20 @@
+projects:
+  - id: mentorship
+    title: mentorship
+    description: mentorship
+    category: mentorship
+
+  - id: tech-summit
+    title: techSummit
+    description: techSummit
+    category: techSummit
+
+  - id: language
+    title: language
+    description: language
+    category: language
+
+  - id: charity
+    title: charity
+    description: charity
+    category: charity

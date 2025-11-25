@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "mkdir -p public/content && cp content/*.yaml public/content/",
     "build": "vite build",
     "preview": "vite preview"
   },

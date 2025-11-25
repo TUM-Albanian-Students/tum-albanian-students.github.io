@@ -1,0 +1,22 @@
+events:
+  - id: flag-day-gala
+    title: flagDay
+    date: flagDayDate
+    image: https://images.unsplash.com/photo-1514525253440-b393452e8d26?q=80&w=1974&auto=format&fit=crop
+    buttonText: details
+    featured: true
+    status: upcoming
+
+  - id: tech-talks
+    title: techTalks
+    image: https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1740&auto=format&fit=crop
+    buttonText: register
+    featured: false
+    status: upcoming
+
+  - id: alps-excursion
+    title: alpsExcursion
+    image: https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1740&auto=format&fit=crop
+    buttonText: gallery
+    featured: false
+    status: past
