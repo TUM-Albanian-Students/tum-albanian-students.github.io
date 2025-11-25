@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "events": "Events",
+    "projects": "Projects",
+    "team": "Team",
+    "contact": "Contact",
+    "tumMainSite": "TUM Main Site",
+    "studentUnion": "Student Union",
+    "search": "Search...",
+    "searchWebsite": "Search website..."
+  },
+  "hero": {
+    "title": "TUM Albanian",
+    "subtitle": "Student Society",
+    "description": "The official community for Albanian students at the Technical University of Munich. Fostering excellence, heritage, and connection.",
+    "established": "Established 2024",
+    "tagline": "Uniting minds, building bridges across Munich.",
+    "scrollDiscover": "Scroll to discover"
+  },
+  "events": {
+    "title": "Life at the Society",
+    "description": "From academic workshops and career fairs to cultural nights and casual meetups, we curate experiences that bring the Albanian spirit to the heart of Bavaria.",
+    "quote": "Knowledge enhances culture, and culture inspires knowledge.",
+    "viewCalendar": "View full calendar",
+    "flagDay": "Flag Day Gala",
+    "flagDayDate": "November 28 • Upcoming",
+    "techTalks": "Tech Talks Series",
+    "alpsExcursion": "Alps Excursion",
+    "details": "Details",
+    "register": "Register",
+    "gallery": "Gallery",
+    "past": "Past"
+  },
+  "projects": {
+    "title": "Ongoing Projects",
+    "viewArchive": "View project archive",
+    "items": {
+      "mentorship": {
+        "title": "Freshmen Mentorship Program",
+        "description": "A comprehensive guide and buddy system helping new Albanian students navigate the TUM campus, registration processes, and life in Munich.",
+        "category": "Support"
+      },
+      "techSummit": {
+        "title": "Balkan Tech Summit",
+        "description": "A collaborative initiative with other Balkan student societies to host a semesterly tech conference featuring industry leaders and professors.",
+        "category": "Networking"
+      },
+      "language": {
+        "title": "Albanian Language & Culture",
+        "description": "Weekly sessions for students interested in learning the Albanian language or diving deeper into our rich history, literature, and traditions.",
+        "category": "Education"
+      },
+      "charity": {
+        "title": "Charity Run 2024",
+        "description": "Raising funds for educational supplies for schools in rural Kosovo and Albania. Join us for a 5k run through the English Garden.",
+        "category": "Community"
+      }
+    }
+  },
+  "team": {
+    "title": "Our Board",
+    "description": "Meet the dedicated students working behind the scenes to make the society a home for everyone. We are always looking for new volunteers.",
+    "roles": {
+      "president": "President",
+      "vicePresident": "Vice President",
+      "eventCoordinator": "Event Coordinator",
+      "financeHead": "Finance Head"
+    }
+  },
+  "about": {
+    "ourStory": "Our Story",
+    "title": "About the Society",
+    "lead": "Established in 2024, the TUM Albanian Student Society serves as the primary hub for Albanian students pursuing their studies at one of Europe's leading technical universities.",
+    "mission": "Our mission is threefold: to Support, to Connect, and to Represent. We provide academic resources and mentorship for incoming students, creating a soft landing in Munich. We organize social events that build lifelong friendships. And we represent our vibrant culture within the international atmosphere of TUM.",
+    "vision": "We envision a thriving community where every Albanian student at TUM feels empowered to achieve their academic goals while staying connected to their roots.",
+    "quote": "Unity is power; without unity there is no strength.",
+    "quoteAuthor": "Albanian Proverb"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you. Send us a message for partnerships, membership inquiries, or just to say Përshëndetje.",
+    "info": "Contact Info",
+    "email": "Email",
+    "social": "Social",
+    "location": "Location",
+    "university": "University",
+    "office": "Office",
+    "universityName": "Technical University of Munich",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "message": "Message",
+    "messagePlaceholder": "How can we help?",
+    "sendMessage": "Send Message"
+  },
+  "footer": {
+    "description": "Connecting students, celebrating heritage, and fostering future leaders at the Technical University of Munich.",
+    "contact": "Contact",
+    "connect": "Connect",
+    "copyright": "TUM Albanian Student Society.",
+    "imprint": "Imprint",
+    "privacy": "Privacy",
+    "cookies": "Cookies"
+  }
+}

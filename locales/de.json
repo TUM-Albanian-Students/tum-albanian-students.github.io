@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über Uns",
+    "events": "Veranstaltungen",
+    "projects": "Projekte",
+    "team": "Team",
+    "contact": "Kontakt",
+    "tumMainSite": "TUM Hauptseite",
+    "studentUnion": "Studentenwerk",
+    "search": "Suchen...",
+    "searchWebsite": "Website durchsuchen..."
+  },
+  "hero": {
+    "title": "TUM Albanische",
+    "subtitle": "Studentenvereinigung",
+    "description": "Die offizielle Gemeinschaft für albanische Studierende an der Technischen Universität München. Wir fördern Exzellenz, Erbe und Verbindung.",
+    "established": "Gegründet 2024",
+    "tagline": "Köpfe vereinen, Brücken bauen in ganz München.",
+    "scrollDiscover": "Scrollen zum Entdecken"
+  },
+  "events": {
+    "title": "Leben in der Vereinigung",
+    "description": "Von akademischen Workshops und Karrieremessen bis hin zu Kulturnächten und lockeren Treffen kuratieren wir Erlebnisse, die den albanischen Geist ins Herz Bayerns bringen.",
+    "quote": "Wissen bereichert Kultur, und Kultur inspiriert Wissen.",
+    "viewCalendar": "Vollständigen Kalender anzeigen",
+    "flagDay": "Flaggentag-Gala",
+    "flagDayDate": "28. November • Bevorstehend",
+    "techTalks": "Tech Talks Serie",
+    "alpsExcursion": "Alpen-Ausflug",
+    "details": "Details",
+    "register": "Anmelden",
+    "gallery": "Galerie",
+    "past": "Vergangen"
+  },
+  "projects": {
+    "title": "Laufende Projekte",
+    "viewArchive": "Projektarchiv anzeigen",
+    "items": {
+      "mentorship": {
+        "title": "Erstsemester-Mentorenprogramm",
+        "description": "Ein umfassender Leitfaden und Buddy-System, das neuen albanischen Studierenden hilft, sich auf dem TUM-Campus, bei Anmeldeprozessen und im Leben in München zurechtzufinden.",
+        "category": "Unterstützung"
+      },
+      "techSummit": {
+        "title": "Balkan Tech Summit",
+        "description": "Eine Kooperationsinitiative mit anderen balkanischen Studentenvereinigungen, um eine semesterweise Tech-Konferenz mit Branchenführern und Professoren zu veranstalten.",
+        "category": "Networking"
+      },
+      "language": {
+        "title": "Albanische Sprache & Kultur",
+        "description": "Wöchentliche Sitzungen für Studierende, die die albanische Sprache lernen oder tiefer in unsere reiche Geschichte, Literatur und Traditionen eintauchen möchten.",
+        "category": "Bildung"
+      },
+      "charity": {
+        "title": "Wohltätigkeitslauf 2024",
+        "description": "Spendensammlung für Schulmaterialien für Schulen im ländlichen Kosovo und Albanien. Begleiten Sie uns bei einem 5-km-Lauf durch den Englischen Garten.",
+        "category": "Gemeinschaft"
+      }
+    }
+  },
+  "team": {
+    "title": "Unser Vorstand",
+    "description": "Lernen Sie die engagierten Studierenden kennen, die hinter den Kulissen arbeiten, um die Vereinigung zu einem Zuhause für alle zu machen. Wir suchen immer nach neuen Freiwilligen.",
+    "roles": {
+      "president": "Präsident",
+      "vicePresident": "Vizepräsident",
+      "eventCoordinator": "Veranstaltungskoordinator",
+      "financeHead": "Finanzleiter"
+    }
+  },
+  "about": {
+    "ourStory": "Unsere Geschichte",
+    "title": "Über die Vereinigung",
+    "lead": "Die 2024 gegründete TUM Albanische Studentenvereinigung dient als zentrale Anlaufstelle für albanische Studierende, die ihr Studium an einer der führenden technischen Universitäten Europas absolvieren.",
+    "mission": "Unsere Mission ist dreifach: Unterstützen, Verbinden und Repräsentieren. Wir bieten akademische Ressourcen und Mentoring für neue Studierende und schaffen eine sanfte Landung in München. Wir organisieren soziale Veranstaltungen, die lebenslange Freundschaften aufbauen. Und wir repräsentieren unsere lebendige Kultur in der internationalen Atmosphäre der TUM.",
+    "vision": "Wir stellen uns eine blühende Gemeinschaft vor, in der sich jeder albanische Studierende an der TUM befähigt fühlt, seine akademischen Ziele zu erreichen und gleichzeitig mit seinen Wurzeln verbunden zu bleiben.",
+    "quote": "Einheit ist Kraft; ohne Einheit gibt es keine Stärke.",
+    "quoteAuthor": "Albanisches Sprichwort"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir würden uns freuen, von Ihnen zu hören. Senden Sie uns eine Nachricht für Partnerschaften, Mitgliedschaftsanfragen oder einfach um Përshëndetje zu sagen.",
+    "info": "Kontaktinformationen",
+    "email": "E-Mail",
+    "social": "Soziale Medien",
+    "location": "Standort",
+    "university": "Universität",
+    "office": "Büro",
+    "universityName": "Technische Universität München",
+    "name": "Name",
+    "namePlaceholder": "Ihr Name",
+    "message": "Nachricht",
+    "messagePlaceholder": "Wie können wir helfen?",
+    "sendMessage": "Nachricht senden"
+  },
+  "footer": {
+    "description": "Studierende verbinden, Erbe feiern und zukünftige Führungskräfte an der Technischen Universität München fördern.",
+    "contact": "Kontakt",
+    "connect": "Verbinden",
+    "copyright": "TUM Albanische Studentenvereinigung.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "cookies": "Cookies"
+  }
+}

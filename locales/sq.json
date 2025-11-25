@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "Ballina",
+    "about": "Rreth Nesh",
+    "events": "Ngjarje",
+    "projects": "Projekte",
+    "team": "Ekipi",
+    "contact": "Kontakti",
+    "tumMainSite": "Faqja Kryesore e TUM",
+    "studentUnion": "Bashkimi Studentor",
+    "search": "Kërko...",
+    "searchWebsite": "Kërko në faqe..."
+  },
+  "hero": {
+    "title": "TUM Shqiptare",
+    "subtitle": "Shoqëria Studentore",
+    "description": "Komuniteti zyrtar për studentët shqiptarë në Universitetin Teknik të Mynihut. Duke nxitur përsosmërinë, trashëgiminë dhe lidhjen.",
+    "established": "Themeluar 2024",
+    "tagline": "Duke bashkuar mendje, duke ndërtuar ura nëpër Mynih.",
+    "scrollDiscover": "Rrëshqit për të zbuluar"
+  },
+  "events": {
+    "title": "Jeta në Shoqëri",
+    "description": "Nga workshop-e akademike dhe panairi të karrierës deri tek net kulturore dhe takime të rastësishme, ne kurojmë përvoja që sjellin shpirtin shqiptar në zemër të Bavarisë.",
+    "quote": "Dijet pasurohen nga kultura, dhe kultura frymëzohet nga dijet.",
+    "viewCalendar": "Shiko kalendarin e plotë",
+    "flagDay": "Gala e Ditës së Flamurit",
+    "flagDayDate": "28 Nëntor • E Ardhshme",
+    "techTalks": "Seria e Bisedave Teknike",
+    "alpsExcursion": "Ekskursioni në Alpe",
+    "details": "Detaje",
+    "register": "Regjistrohu",
+    "gallery": "Galeria",
+    "past": "E Kaluar"
+  },
+  "projects": {
+    "title": "Projekte në Vazhdim",
+    "viewArchive": "Shiko arkivin e projekteve",
+    "items": {
+      "mentorship": {
+        "title": "Programi i Mentorimit për të Sapoardhurit",
+        "description": "Një udhëzues gjithëpërfshirës dhe sistem shokësh që ndihmon studentët e rinj shqiptarë të lundrojnë në kampusin e TUM, proceset e regjistrimit dhe jetën në Mynih.",
+        "category": "Mbështetje"
+      },
+      "techSummit": {
+        "title": "Samiti Teknik i Ballkanit",
+        "description": "Një iniciativë bashkëpunuese me shoqëri të tjera studentore ballkanike për të organizuar një konferencë teknike semestrale me liderë të industrisë dhe profesorë.",
+        "category": "Rrjetëzim"
+      },
+      "language": {
+        "title": "Gjuha dhe Kultura Shqiptare",
+        "description": "Sesione javore për studentë të interesuar të mësojnë gjuhën shqipe ose të zhyten më thellë në historinë, letërsinë dhe traditat tona të pasura.",
+        "category": "Edukim"
+      },
+      "charity": {
+        "title": "Vrapimi Bamirës 2024",
+        "description": "Duke mbledhur fonde për materiale arsimore për shkolla në zonat rurale të Kosovës dhe Shqipërisë. Bashkohuni me ne për një vrapim 5 km nëpër Kopshtin Anglez.",
+        "category": "Komunitet"
+      }
+    }
+  },
+  "team": {
+    "title": "Bordi Ynë",
+    "description": "Njihuni me studentët e përkushtuar që punojnë prapa skenave për ta bërë shoqërinë një shtëpi për të gjithë. Ne gjithmonë po kërkojmë vullnetarë të rinj.",
+    "roles": {
+      "president": "President",
+      "vicePresident": "Nënpresident",
+      "eventCoordinator": "Koordinator Ngjarjesh",
+      "financeHead": "Drejtues Financash"
+    }
+  },
+  "about": {
+    "ourStory": "Historia Jonë",
+    "title": "Rreth Shoqërisë",
+    "lead": "E themeluar në vitin 2024, Shoqëria Studentore Shqiptare e TUM shërben si qendra kryesore për studentët shqiptarë që ndjekin studimet e tyre në një nga universitetet teknike kryesore të Europës.",
+    "mission": "Misioni ynë është i trefishtë: të Mbështesim, të Lidhim dhe të Përfaqësojmë. Ne ofrojmë burime akademike dhe mentorë për studentët e rinj, duke krijuar një ulje të butë në Mynih. Ne organizojmë ngjarje sociale që ndërtojnë miqësi për gjithë jetën. Dhe ne përfaqësojmë kulturën tonë të gjallë brenda atmosferës ndërkombëtare të TUM.",
+    "vision": "Ne imagjinojmë një komunitet të lulëzuar ku çdo student shqiptar në TUM ndjehet i fuqizuar për të arritur qëllimet e tij akademike duke qëndruar i lidhur me rrënjët e tij.",
+    "quote": "Bashkimi është fuqi; pa bashkim nuk ka forcë.",
+    "quoteAuthor": "Proverb Shqiptar"
+  },
+  "contact": {
+    "title": "Kontaktoni",
+    "subtitle": "Do të donim të dëgjonim nga ju. Dërgoni një mesazh për partneritete, pyetje për anëtarësim, ose thjesht për të thënë Përshëndetje.",
+    "info": "Informacion Kontakti",
+    "email": "Email",
+    "social": "Rrjete Sociale",
+    "location": "Vendndodhja",
+    "university": "Universiteti",
+    "office": "Zyra",
+    "universityName": "Universiteti Teknik i Mynihut",
+    "name": "Emri",
+    "namePlaceholder": "Emri juaj",
+    "message": "Mesazhi",
+    "messagePlaceholder": "Si mund t'ju ndihmojmë?",
+    "sendMessage": "Dërgo Mesazh"
+  },
+  "footer": {
+    "description": "Duke lidhur studentët, duke festuar trashëgiminë dhe duke nxitur liderët e ardhshëm në Universitetin Teknik të Mynihut.",
+    "contact": "Kontakti",
+    "connect": "Lidhu",
+    "copyright": "Shoqëria Studentore Shqiptare e TUM.",
+    "imprint": "Informacion Ligjor",
+    "privacy": "Privatësia",
+    "cookies": "Cookies"
+  }
+}

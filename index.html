@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUM Albanian Student Society</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              albanian: {
+                red: '#E41E20',
+                black: '#000000',
+              },
+              kosovar: {
+                blue: '#244AA5',
+                gold: '#D0A650',
+              },
+              paper: '#FDFBF7', // A very slight off-white for that academic paper feel
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'Times New Roman', 'serif'],
+              sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar to match the minimal aesthetic */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+      body {
+        background-color: #ffffff;
+      }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white text-gray-900 antialiased selection:bg-albanian-red selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
