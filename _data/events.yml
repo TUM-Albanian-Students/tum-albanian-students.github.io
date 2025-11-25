@@ -1,0 +1,12 @@
+title: "Upcoming Events"
+subtitle: "Join us for exciting activities and gatherings"
+subsubtitle: "Mark your calendar"
+
+events:
+  - year: 2025
+    month: 1
+    day: 15
+    title: "Holiday Gathering"
+    content: "Join us for our annual holiday celebration with food, music, and fun!"
+    active: true
+

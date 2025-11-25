@@ -1,0 +1,15 @@
+title: "Our Team"
+description: "Meet the founding members who make our community possible"
+
+members:
+  - index: 1
+    name: "Team Member 1"
+    field: "Computer Science"
+    description: "Passionate about building community and technology."
+    profile_image_url: "/assets/img/team-placeholder.svg"
+  - index: 2
+    name: "Team Member 2"
+    field: "Engineering"
+    description: "Dedicated to supporting fellow students."
+    profile_image_url: "/assets/img/team-placeholder.svg"
+

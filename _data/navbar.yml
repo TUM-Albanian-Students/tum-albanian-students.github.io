@@ -1,0 +1,24 @@
+en:
+  home: "Home"
+  about: "About Us"
+  mission: "Our Mission"
+  team: "Our Team"
+  projects: "Projects"
+  contact: "Contact"
+
+sq:
+  home: "Kryefaqja"
+  about: "Rreth Nesh"
+  mission: "Misioni Ynë"
+  team: "Ekipi Ynë"
+  projects: "Projektet"
+  contact: "Kontakti"
+
+de:
+  home: "Startseite"
+  about: "Über Uns"
+  mission: "Unsere Mission"
+  team: "Unser Team"
+  projects: "Projekte"
+  contact: "Kontakt"
+

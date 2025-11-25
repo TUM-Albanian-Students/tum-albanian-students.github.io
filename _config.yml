@@ -1,16 +1,16 @@
 title: TUM Albanian Student Society
 email: tumalbaniansociety@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Description
+  Connecting Albanian students at Technical University of Munich. We foster cultural exchange, academic excellence, and lasting friendships.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://tum-albanian-students.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 domain: tum-albanian-students.github.io
 # Social Media
 github_username:  tum-albanian-students
 
 
 # Build settings
-theme: minima
+# theme: minima  # Removed - using custom layout
 plugins:
   - jekyll-feed
   - jekyll-sass-converter

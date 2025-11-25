@@ -1,0 +1,209 @@
+---
+layout: default
+title: Home
+---
+
+<main class="main">
+	<!-- Hero Section -->
+	<section id="hero" class="hero section">
+		<div class="container" data-aos="fade-up" data-aos-delay="100">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-lg-10 text-center">
+					<div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+						{% assign hero_en = site.data.hero.en %}
+						{% assign hero_sq = site.data.hero.sq %}
+						{% assign hero_de = site.data.hero.de %}
+						<span class="hero-badge" data-i18n="hero.st_org" data-en_text="{{ hero_en.st_org }}" data-sq_text="{{ hero_sq.st_org }}" data-de_text="{{ hero_de.st_org }}">{{ hero_en.st_org }}</span>
+						<h1 data-i18n="hero.title" data-en_text="{{ hero_en.title }}" data-sq_text="{{ hero_sq.title }}" data-de_text="{{ hero_de.title }}">{{ hero_en.title }}</h1>
+						<p class="hero-subtitle" data-i18n="hero.subtitle" data-en_text="{{ hero_en.subtitle }}" data-sq_text="{{ hero_sq.subtitle }}" data-de_text="{{ hero_de.subtitle }}">{{ hero_en.subtitle }}</p>
+						<div class="hero-meta">
+							<span class="hero-since" data-i18n="hero.start" data-en_text="{{ hero_en.start }}" data-sq_text="{{ hero_sq.start }}" data-de_text="{{ hero_de.start }}">{{ hero_en.start }}</span>
+						</div>
+						<p class="hero-description" data-i18n="hero.description" data-en_text="{{ hero_en.description }}" data-sq_text="{{ hero_sq.description }}" data-de_text="{{ hero_de.description }}">{{ hero_en.description }}</p>
+						<div class="hero-cta">
+							<a href="#social-about" class="btn btn-primary" data-i18n="hero.join_us_btn" data-en_text="{{ hero_en.join_us_btn }}" data-sq_text="{{ hero_sq.join_us_btn }}" data-de_text="{{ hero_de.join_us_btn }}">{{ hero_en.join_us_btn }}</a>
+							<a href="#about" class="btn btn-outline" data-i18n="hero.learn_more_btn" data-en_text="{{ hero_en.learn_more_btn }}" data-sq_text="{{ hero_sq.learn_more_btn }}" data-de_text="{{ hero_de.learn_more_btn }}">{{ hero_en.learn_more_btn }}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /Hero Section -->
+
+	<!-- About Section -->
+	<section id="about" class="about section light-background">
+		<div class="container" data-aos="fade-up">
+			<div class="row align-items-center gy-5 gx-lg-5">
+				<div class="col-lg-6">
+					<div class="about-image" data-aos="fade-right" data-aos-delay="100">
+						<img src="{{ '/assets/img/team.jpeg' | relative_url }}" alt="TUM Albanian Society team members at university event" class="img-fluid rounded" loading="lazy" />
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="about-content" data-aos="fade-left" data-aos-delay="200">
+						{% assign about = site.data.about %}
+						<h2>{{ about.title }}</h2>
+						<div class="about-category">
+							<span><i class="bi bi-people"></i> {{ about.category }}</span>
+						</div>
+						<p>{{ about.description }}</p>
+
+						<div class="highlights">
+							<h3>{{ about.offer_title }}</h3>
+							<ul class="highlight-list">
+								<li>
+									<i class="bi bi-check-circle-fill"></i>
+									<span>{{ about.offer_point1 }}</span>
+								</li>
+								<li>
+									<i class="bi bi-check-circle-fill"></i>
+									<span>{{ about.offer_point2 }}</span>
+								</li>
+								<li>
+									<i class="bi bi-check-circle-fill"></i>
+									<span>{{ about.offer_point3 }}</span>
+								</li>
+								<li>
+									<i class="bi bi-check-circle-fill"></i>
+									<span>{{ about.offer_point4 }}</span>
+								</li>
+							</ul>
+						</div>
+
+						<a href="#social" class="btn btn-primary mt-3 mb-4">
+							{{ about.button_text }} <i class="bi bi-arrow-right"></i>
+						</a>
+
+						<div class="social-links-compact mt-4">
+							<a href="mailto:tumalbaniansociety@gmail.com" class="social-link-with-text email" title="Email Us">
+								<div class="social-icon-small email">
+									<i class="bi bi-envelope-fill"></i>
+								</div>
+								<span>tumalbaniansociety@gmail.com</span>
+							</a>
+							<a href="https://www.instagram.com/albanian_students_tum" target="_blank" rel="noopener noreferrer" class="social-link-with-text instagram" title="Instagram">
+								<div class="social-icon-small instagram">
+									<img src="{{ '/assets/img/instagram-logo.svg' | relative_url }}" alt="Instagram" class="social-logo-small" />
+								</div>
+								<span>@albanian_students_tum</span>
+							</a>
+							<a href="https://www.linkedin.com/company/tum-albanian-student-society/" target="_blank" rel="noopener noreferrer" class="social-link-with-text linkedin" title="LinkedIn">
+								<div class="social-icon-small linkedin">
+									<img src="{{ '/assets/img/linkedin-logo.svg' | relative_url }}" alt="LinkedIn" class="social-logo-small" />
+								</div>
+								<span>TUM Albanian Student Society</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /About Section -->
+
+	<!-- Mission Section -->
+	<section id="mission" class="mission section">
+
+		<!-- Section Title -->
+		<div class="container section-title">
+			{% assign mission = site.data.mission %}
+			<h2>{{ mission.title }}</h2>
+			<p>{{ mission.subtitle }}</p>
+		</div>
+		<!-- End Section Title -->
+
+		<div class="container">
+			<div class="row gy-4">
+				{% for mission_item in mission.missions %}
+				<div class="col-md-6 col-lg-4">
+					<div class="mission-card">
+						<div class="mission-icon"> <i class="{{ mission_item.typeLogo }}"></i> </div>
+						<h3>{{ mission_item.title }}</h3>
+						<p>{{ mission_item.content }}</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- End Mission Section -->
+
+	<!-- Team Section -->
+	<section id="team" class="team section light-background">
+		
+		<!-- Section Title -->
+		<div class="container section-title">
+			{% assign team = site.data.team %}
+			<h2>{{ team.title }}</h2>
+			<p>{{ team.description }}</p>
+		</div>
+		<!-- End Section Title -->
+
+		<div class="container">
+			<div class="row gy-4">
+				{% for member in team.members %}
+				<div class="col-md-6 col-lg-4">
+					<div class="team-member-card">
+						<div class="team-image-container">
+							<img src="{{ member.profile_image_url | relative_url }}" alt="Photo of {{ member.name }}, {{ member.field }}" class="team-image" loading="lazy" />
+						</div>
+						<h3>{{ member.name }}</h3>
+						<div class="team-role">
+							<span>{{ member.field }}</span>
+						</div>
+						<p>{{ member.description }}</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- /Team Section -->
+
+	<!-- Projects Section -->
+	<section id="projects" class="projects section">
+		<!-- Section Title -->
+		<div class="container section-title">
+			{% assign projects = site.data.projects %}
+			<h2>{{ projects.title }}</h2>
+			<p>{{ projects.subtitle }}</p>
+		</div>
+		<!-- End Section Title -->
+
+		<div class="container">
+			<div class="row g-4">
+				{% for project in projects.projects %}
+				<div class="col-lg-6">
+					<div class="project-card">
+						<div class="project-icon">
+							<i class="{{ project.icon }}"></i>
+						</div>
+
+						<h3>{{ project.name }}</h3>
+						<p class="project-description">{{ project.description }}</p>
+						<ul class="project-features">
+							{% for feature in project.features %}
+							<li><i class="bi bi-check-circle-fill"></i> {{ feature }}</li>
+							{% endfor %}
+						</ul>
+						<div class="project-cta">
+							<a href="{{ project.link }}" class="btn btn-primary">{{ project.link_text }}</a>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- /Projects Section -->
+
+	<!-- Social Links Section -->
+	<!-- Removed separate section -->
+	<!-- /Social Links Section -->
+
+	<!-- Contact Section -->
+	<!-- Removed Contact Section -->
+	<!-- End Contact Section -->
+</main>

@@ -1,0 +1,13 @@
+title: "Tech For Good"
+subtitle: "Using technology to make a positive impact"
+
+tech_missions:
+  - index: 1
+    title: "Tech Projects"
+    goal1: "Develop solutions for community needs"
+    goal2: "Collaborate on open-source projects"
+    goal3: "Organize hackathons and tech events"
+    goal4: "Mentor students in tech skills"
+    buttonText: "Get Involved"
+    typeLogo: "bi bi-code-slash"
+

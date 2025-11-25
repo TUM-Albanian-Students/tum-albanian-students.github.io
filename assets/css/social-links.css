@@ -1,0 +1,201 @@
+/* Social Links Section - Simplified Design */
+
+.social {
+  padding: 100px 0;
+}
+
+/* Compact Social Links for About Section */
+.social-links-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-link-with-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: var(--default-color);
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: var(--surface-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.social-link-with-text:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: var(--heading-color);
+}
+
+.social-link-with-text span {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.social-icon-small {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  /* Ensure it doesn't shrink */
+  min-height: 40px;
+  /* Ensure it doesn't shrink */
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.social-icon-small i {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.social-logo-small {
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1 / 1;
+  filter: brightness(0) invert(1);
+  object-fit: contain;
+}
+
+.social-icon-small.email {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.social-icon-small.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon-small.linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+}
+
+.social-link-with-text:hover .social-icon-small {
+  transform: scale(1.05);
+}
+
+/* Original Social Links Styles (kept for compatibility if needed elsewhere) */
+.social-links-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.social-link-item {
+  background: var(--surface-color);
+  border-radius: 16px;
+  padding: 24px 30px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-link-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-color);
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.social-icon-wrapper i {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.social-logo {
+  width: 28px;
+  height: 28px;
+  aspect-ratio: 1 / 1;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+
+.social-icon-wrapper.email {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.social-icon-wrapper.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon-wrapper.linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+}
+
+.social-link-item:hover .social-icon-wrapper {
+  transform: scale(1.1);
+}
+
+.social-link-info {
+  flex: 1;
+}
+
+.social-link-info h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 4px;
+}
+
+.social-link-info p {
+  color: var(--default-color);
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social {
+    padding: 80px 0;
+  }
+
+  .social-link-item {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .social-icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-icon-wrapper i {
+    font-size: 24px;
+  }
+
+  .social-link-info h4 {
+    font-size: 18px;
+  }
+
+  .social-link-info p {
+    font-size: 14px;
+  }
+}

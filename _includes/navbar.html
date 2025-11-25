@@ -1,0 +1,96 @@
+<header id="header" class="header d-flex align-items-center position-relative">
+	<div class="container-fluid d-flex align-items-center justify-content-between">
+		<a href="{{ '/' | relative_url }}" class="logo d-flex align-items-center me-3">
+			<img src="{{ '/assets/img/logowithtext.png' | relative_url }}" alt="TUM Albanian Society Logo" loading="lazy" />
+		</a>	
+		
+		<div class="language-selector">
+			<select id="langSelect" onchange="setLang(this.value)">
+				<option value="en" selected>English</option>
+				<option value="sq">Shqip</option>
+				<option value="de">Deutsch</option>
+			</select>
+		</div>
+
+		<nav id="navmenu" class="navmenu">
+			<ul>
+				{% assign nav_en = site.data.navbar.en %}
+				{% assign nav_sq = site.data.navbar.sq %}
+				{% assign nav_de = site.data.navbar.de %}
+				<li><a href="#hero" class="active" data-i18n="nav.home" data-en_text="{{ nav_en.home }}" data-sq_text="{{ nav_sq.home }}" data-de_text="{{ nav_de.home }}">{{ nav_en.home }}</a></li>
+				<li><a href="#about" data-i18n="nav.about" data-en_text="{{ nav_en.about }}" data-sq_text="{{ nav_sq.about }}" data-de_text="{{ nav_de.about }}">{{ nav_en.about }}</a></li>
+				<li><a href="#mission" data-i18n="nav.mission" data-en_text="{{ nav_en.mission }}" data-sq_text="{{ nav_sq.mission }}" data-de_text="{{ nav_de.mission }}">{{ nav_en.mission }}</a></li>
+				<li><a href="#team" data-i18n="nav.team" data-en_text="{{ nav_en.team }}" data-sq_text="{{ nav_sq.team }}" data-de_text="{{ nav_de.team }}">{{ nav_en.team }}</a></li>
+				<li><a href="#projects" data-i18n="nav.projects" data-en_text="{{ nav_en.projects }}" data-sq_text="{{ nav_sq.projects }}" data-de_text="{{ nav_de.projects }}">{{ nav_en.projects }}</a></li>
+			</ul>
+			<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+		</nav>
+	</div>
+</header>
+
+<style>
+	.language-selector {
+		margin-right: 55px;
+	}
+	
+	.language-selector select {
+		font-family: var(--nav-font);
+		font-size: 14px;
+		font-weight: 500;
+		background-color: var(--surface-color);
+		color: var(--nav-color);
+		border: 1px solid var(--accent-color);
+		border-radius: 50px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		padding: 8px 16px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23e50914' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: calc(100% - 12px) center;
+		padding-right: 30px;
+	}
+	
+	.language-selector select:hover, 
+	.language-selector select:focus {
+		outline: none;
+		background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+		transform: translateY(-3px);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+	}
+	
+	.language-selector select option {
+		font-size: 14px;
+		font-weight: 400;
+		background-color: var(--surface-color);
+		color: var(--default-color);
+		padding: 10px;
+	}
+	
+	@media (max-width: 768px) {
+		.language-selector {
+			position: absolute;
+			top: 18px;
+			right: 80px;
+		}
+		
+		.language-selector select {
+			padding: 6px 30px 6px 12px;
+			font-size: 12px;
+		}
+	}
+</style>
+
+<script>
+	function setLang(lang) {
+		if (window.LanguageSwitcher) {
+			window.LanguageSwitcher.setLanguage(lang);
+		} else {
+			localStorage.setItem('preferred-language', lang);
+			location.reload();
+		}
+	}
+</script>
+

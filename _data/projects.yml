@@ -1,0 +1,25 @@
+title: "Our Projects"
+subtitle: "Initiatives that make a difference"
+
+projects:
+  - name: "Tech For Good"
+    description: "Using technology to make a positive impact in our community and beyond."
+    features:
+      - "Develop solutions for community needs"
+      - "Collaborate on open-source projects"
+      - "Organize hackathons and tech events"
+      - "Mentor students in tech skills"
+    icon: "bi bi-code-slash"
+    link: "#contact"
+    link_text: "Get Involved"
+
+  - name: "ALBuddy"
+    description: "A mentorship program connecting Albanian students at TUM with experienced mentors."
+    features:
+      - "One-on-one mentorship matching"
+      - "Academic and career guidance"
+      - "Cultural integration support"
+      - "Networking opportunities"
+    icon: "bi bi-people-fill"
+    link: "#contact"
+    link_text: "Join the Program"
