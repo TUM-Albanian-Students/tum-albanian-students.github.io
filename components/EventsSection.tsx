@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/Button';
 import { useTranslation } from 'react-i18next';
 import { loadEvents, Event } from '../utils/contentLoader';
@@ -44,7 +45,7 @@ export const EventsSection: React.FC = () => {
 
           {/* Featured Event - Spans 2 cols */}
           {featuredEvent && (
-            <div className="md:col-span-2 group cursor-pointer block">
+            <Link to={`/events/${featuredEvent.id}`} className="md:col-span-2 group cursor-pointer block">
               <div className="overflow-hidden rounded-sm mb-4">
                 <img
                   src={featuredEvent.image}
@@ -67,12 +68,12 @@ export const EventsSection: React.FC = () => {
                   <Button variant="outline" size="sm">{t(`events.${featuredEvent.buttonText}`)}</Button>
                 </div>
               </div>
-            </div>
+            </Link>
           )}
 
           {/* Regular Events */}
           {regularEvents.map((event) => (
-            <div key={event.id} className="group cursor-pointer block">
+            <Link key={event.id} to={`/events/${event.id}`} className="group cursor-pointer block">
               <div className="overflow-hidden rounded-sm mb-4 relative">
                 <img
                   src={event.image}
@@ -95,7 +96,7 @@ export const EventsSection: React.FC = () => {
                 </div>
                 <Button variant="outline" size="sm">{t(`events.${event.buttonText}`)}</Button>
               </div>
-            </div>
+            </Link>
           ))}
 
         </div>

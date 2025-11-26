@@ -31,7 +31,59 @@
     "details": "Details",
     "register": "Register",
     "gallery": "Gallery",
-    "past": "Past"
+    "past": "Past",
+    "details": {
+      "whatToExpect": "What to Expect",
+      "whoShouldAttend": "Who Should Attend",
+      "registerNow": "Register Now",
+      "freeForMembers": "Free for members",
+      "viewGallery": "View Gallery",
+      "flag-day-gala": {
+        "subtitle": "Celebrating Albanian Independence and Culture",
+        "description": "Join us for an elegant evening celebrating Albanian Flag Day and Independence Day. This gala brings together students, alumni, and friends for a night of traditional music, authentic Albanian cuisine, and meaningful connections.",
+        "highlights": {
+          "0": "Traditional Albanian dinner with regional specialties from Kosovo, Albania, and the diaspora",
+          "1": "Live folk music performance featuring traditional Albanian instruments",
+          "2": "Historical presentation on the significance of Flag Day and Albanian independence",
+          "3": "Networking opportunity with Albanian professionals and TUM alumni"
+        },
+        "audience": "This event is open to all students, particularly those interested in Albanian culture, history, and heritage. Whether you're Albanian, from the Balkans, or simply curious about our rich traditions, you're welcome to join us.",
+        "time": "18:00 - 23:00",
+        "location": "TUM Main Building",
+        "address": "Arcisstraße 21, 80333 München",
+        "capacity": "120 guests"
+      },
+      "tech-talks": {
+        "subtitle": "Industry Insights from Albanian Tech Leaders",
+        "description": "A monthly series featuring successful Albanian professionals in tech sharing their journey, insights, and advice. Each session includes a presentation, Q&A, and networking time.",
+        "highlights": {
+          "0": "Hear from Albanian engineers at major tech companies (Google, Microsoft, startups)",
+          "1": "Learn about career paths, interview preparation, and industry trends",
+          "2": "Network with peers and professionals in an informal setting",
+          "3": "Get personalized advice for your career goals"
+        },
+        "audience": "Ideal for Computer Science, Informatics, and Engineering students looking to learn from experienced professionals and expand their network in the tech industry.",
+        "time": "18:30 - 20:30",
+        "location": "TUM Informatics Building",
+        "address": "Boltzmannstraße 3, 85748 Garching",
+        "capacity": "50 participants"
+      },
+      "alps-excursion": {
+        "subtitle": "A Day in the Bavarian Alps",
+        "description": "Our annual hiking trip brought together over 30 students for a day of adventure in the beautiful Bavarian Alps. Starting from Garmisch-Partenkirchen, we hiked to the Partnach Gorge and enjoyed stunning mountain views.",
+        "highlights": {
+          "0": "Scenic hike through Partnach Gorge with waterfalls and rock formations",
+          "1": "Traditional Bavarian lunch at a mountain hut",
+          "2": "Group photos at the summit with panoramic alpine views",
+          "3": "Team building activities and getting to know fellow students"
+        },
+        "audience": "This was a beginner-friendly hike suitable for all fitness levels. Perfect for nature lovers and those wanting to explore Bavaria beyond Munich.",
+        "time": "Full Day Event",
+        "location": "Partnach Gorge",
+        "address": "Garmisch-Partenkirchen",
+        "capacity": "35 participants"
+      }
+    }
   },
   "projects": {
     "title": "Ongoing Projects",
@@ -56,6 +108,192 @@
         "title": "Charity Run 2024",
         "description": "Raising funds for educational supplies for schools in rural Kosovo and Albania. Join us for a 5k run through the English Garden.",
         "category": "Community"
+      }
+    },
+    "details": {
+      "getInvolved": "Get Involved",
+      "learnMore": "Learn More",
+      "overview": "Project Overview",
+      "objectives": "Key Objectives",
+      "howItWorks": "How It Works",
+      "impact": "Impact & Results",
+      "joinProject": "Join This Project",
+      "openToAll": "Open to all students",
+      "interestedTitle": "Interested in Contributing?",
+      "interestedDescription": "We're always looking for motivated students to join our projects and make a difference in the community.",
+      "volunteer": "Become a Volunteer",
+      "contactUs": "Contact Us",
+      "mentorship": {
+        "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
+        "longDescription": "The Freshmen Mentorship Program pairs incoming Albanian students at TUM with experienced upper-year students who guide them through their first semester. From navigating bureaucracy to finding the best study spots, our mentors are here to help.",
+        "impact": "Starting university in a new country can be overwhelming. Our program ensures that every new student has a friendly face to turn to, making the transition smoother and helping them feel at home in Munich from day one.",
+        "objectives": {
+          "0": {
+            "title": "Smooth Academic Transition",
+            "description": "Help freshmen understand TUM's course registration, exam systems, and academic resources to set them up for success."
+          },
+          "1": {
+            "title": "Social Integration",
+            "description": "Facilitate connections between new and current students, creating a supportive community and lasting friendships."
+          },
+          "2": {
+            "title": "Practical Munich Guidance",
+            "description": "Share insider knowledge about housing, transportation, student discounts, and the best places to study and socialize."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Match & Meet",
+            "description": "New students are paired with mentors based on their program and interests."
+          },
+          "1": {
+            "title": "Guided Onboarding",
+            "description": "Mentors help with enrollment, finding accommodation, and settling into Munich."
+          },
+          "2": {
+            "title": "Ongoing Support",
+            "description": "Regular check-ins throughout the first semester to answer questions and provide guidance."
+          }
+        },
+        "stats": {
+          "participants": "45+",
+          "events": "12",
+          "hours": "200+",
+          "satisfaction": "98%"
+        },
+        "timeline": "Ongoing - Every Semester",
+        "teamSize": "8 Coordinators + 20 Mentors",
+        "status": "Active Recruitment",
+        "coordinator": "Yll Kryeziu"
+      },
+      "tech-summit": {
+        "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop",
+        "longDescription": "The Balkan Tech Summit is a collaborative conference organized by Albanian, Serbian, Croatian, and other Balkan student societies at TUM. We bring together industry professionals, professors, and students for a day of tech talks, workshops, and networking.",
+        "impact": "This summit provides a platform for Balkan students to showcase their talents, learn from leaders in tech, and build connections that span across borders and industries.",
+        "objectives": {
+          "0": {
+            "title": "Industry-Academia Bridge",
+            "description": "Connect students with tech professionals and professors to explore research opportunities and career paths."
+          },
+          "1": {
+            "title": "Knowledge Sharing",
+            "description": "Host workshops on cutting-edge technologies like AI, cloud computing, and cybersecurity."
+          },
+          "2": {
+            "title": "Regional Collaboration",
+            "description": "Foster unity among Balkan student groups and promote cross-cultural professional networks."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Plan & Partner",
+            "description": "Coordinate with other Balkan societies and secure speakers from top tech companies."
+          },
+          "1": {
+            "title": "Workshops & Talks",
+            "description": "Host technical workshops, keynote presentations, and panel discussions."
+          },
+          "2": {
+            "title": "Network & Connect",
+            "description": "Facilitate networking sessions with food, music, and informal conversations."
+          }
+        },
+        "stats": {
+          "participants": "200+",
+          "events": "2",
+          "hours": "16",
+          "satisfaction": "95%"
+        },
+        "timeline": "Semesterly Event",
+        "teamSize": "15 Organizers across societies",
+        "status": "Planning Spring 2025",
+        "coordinator": "Ersjan Keri"
+      },
+      "language": {
+        "image": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=2073&auto=format&fit=crop",
+        "longDescription": "Our language and culture sessions offer weekly meetings where students can learn Albanian, discuss Albanian literature and history, or simply practice speaking in their mother tongue. It's a space to celebrate and preserve our linguistic heritage.",
+        "impact": "Many second-generation Albanian students want to reconnect with their roots. These sessions provide a supportive environment to learn or improve Albanian while exploring the rich cultural traditions of our homeland.",
+        "objectives": {
+          "0": {
+            "title": "Language Proficiency",
+            "description": "Help students learn or improve their Albanian through structured lessons and conversational practice."
+          },
+          "1": {
+            "title": "Cultural Preservation",
+            "description": "Explore Albanian literature, poetry, folk tales, and historical events to deepen cultural understanding."
+          },
+          "2": {
+            "title": "Community Building",
+            "description": "Create a welcoming space for students to connect through shared language and heritage."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Weekly Lessons",
+            "description": "Structured language sessions covering grammar, vocabulary, and pronunciation."
+          },
+          "1": {
+            "title": "Cultural Deep Dives",
+            "description": "Monthly discussions on Albanian history, literature, and traditions."
+          },
+          "2": {
+            "title": "Practice & Connect",
+            "description": "Informal conversation groups to practice speaking and build fluency."
+          }
+        },
+        "stats": {
+          "participants": "25",
+          "events": "20",
+          "hours": "40",
+          "satisfaction": "92%"
+        },
+        "timeline": "Weekly Sessions",
+        "teamSize": "3 Instructors",
+        "status": "Open for New Students",
+        "coordinator": "Erin Kerciku"
+      },
+      "charity": {
+        "image": "https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=2074&auto=format&fit=crop",
+        "longDescription": "The Charity Run 2024 is our flagship fundraising event to support education in underserved areas of Kosovo and Albania. Participants run 5km through Munich's English Garden, with all proceeds going toward school supplies, books, and educational materials.",
+        "impact": "Education transforms lives. By raising funds for schools in rural areas, we're helping to provide children with the tools they need to learn, grow, and build brighter futures.",
+        "objectives": {
+          "0": {
+            "title": "Fundraising for Education",
+            "description": "Raise €5,000 to purchase school supplies, books, and learning materials for rural schools."
+          },
+          "1": {
+            "title": "Community Engagement",
+            "description": "Unite students, alumni, and the wider Munich community in support of a meaningful cause."
+          },
+          "2": {
+            "title": "Awareness Building",
+            "description": "Highlight the educational challenges faced by children in remote areas of the Balkans."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Register & Fundraise",
+            "description": "Participants register for the run and create personal fundraising pages."
+          },
+          "1": {
+            "title": "Run for a Cause",
+            "description": "5km run through the English Garden with refreshments and music."
+          },
+          "2": {
+            "title": "Distribute Donations",
+            "description": "Partner with local NGOs to deliver supplies directly to schools in need."
+          }
+        },
+        "stats": {
+          "participants": "150",
+          "events": "1",
+          "hours": "3",
+          "satisfaction": "97%"
+        },
+        "timeline": "Annual - Summer 2024",
+        "teamSize": "10 Volunteers",
+        "status": "Planning Next Edition",
+        "coordinator": "Altin Azizi"
       }
     }
   },
@@ -102,5 +340,283 @@
     "imprint": "Imprint",
     "privacy": "Privacy",
     "cookies": "Cookies"
+  },
+  "events": {
+    "title": "Life at the Society",
+    "description": "From academic workshops and career fairs to cultural nights and casual meetups, we curate experiences that bring the Albanian spirit to the heart of Bavaria.",
+    "quote": "Knowledge enhances culture, and culture inspires knowledge.",
+    "viewCalendar": "View full calendar",
+    "flagDay": "Flag Day Gala",
+    "flagDayDate": "November 28 • Upcoming",
+    "techTalks": "Tech Talks Series",
+    "alpsExcursion": "Alps Excursion",
+    "details": "Details",
+    "register": "Register",
+    "gallery": "Gallery",
+    "past": "Past",
+    "details": {
+      "whatToExpect": "What to Expect",
+      "whoShouldAttend": "Who Should Attend",
+      "registerNow": "Register Now",
+      "freeForMembers": "Free for members",
+      "viewGallery": "View Gallery",
+      "flag-day-gala": {
+        "subtitle": "Celebrating Albanian Independence and Culture",
+        "description": "Join us for an elegant evening celebrating Albanian Flag Day and Independence Day. This gala brings together students, alumni, and friends for a night of traditional music, authentic Albanian cuisine, and meaningful connections.",
+        "highlights": {
+          "0": "Traditional Albanian dinner with regional specialties from Kosovo, Albania, and the diaspora",
+          "1": "Live folk music performance featuring traditional Albanian instruments",
+          "2": "Historical presentation on the significance of Flag Day and Albanian independence",
+          "3": "Networking opportunity with Albanian professionals and TUM alumni"
+        },
+        "audience": "This event is open to all students, particularly those interested in Albanian culture, history, and heritage. Whether you're Albanian, from the Balkans, or simply curious about our rich traditions, you're welcome to join us.",
+        "time": "18:00 - 23:00",
+        "location": "TUM Main Building",
+        "address": "Arcisstraße 21, 80333 München",
+        "capacity": "120 guests"
+      },
+      "tech-talks": {
+        "subtitle": "Industry Insights from Albanian Tech Leaders",
+        "description": "A monthly series featuring successful Albanian professionals in tech sharing their journey, insights, and advice. Each session includes a presentation, Q&A, and networking time.",
+        "highlights": {
+          "0": "Hear from Albanian engineers at major tech companies (Google, Microsoft, startups)",
+          "1": "Learn about career paths, interview preparation, and industry trends",
+          "2": "Network with peers and professionals in an informal setting",
+          "3": "Get personalized advice for your career goals"
+        },
+        "audience": "Ideal for Computer Science, Informatics, and Engineering students looking to learn from experienced professionals and expand their network in the tech industry.",
+        "time": "18:30 - 20:30",
+        "location": "TUM Informatics Building",
+        "address": "Boltzmannstraße 3, 85748 Garching",
+        "capacity": "50 participants"
+      },
+      "alps-excursion": {
+        "subtitle": "A Day in the Bavarian Alps",
+        "description": "Our annual hiking trip brought together over 30 students for a day of adventure in the beautiful Bavarian Alps. Starting from Garmisch-Partenkirchen, we hiked to the Partnach Gorge and enjoyed stunning mountain views.",
+        "highlights": {
+          "0": "Scenic hike through Partnach Gorge with waterfalls and rock formations",
+          "1": "Traditional Bavarian lunch at a mountain hut",
+          "2": "Group photos at the summit with panoramic alpine views",
+          "3": "Team building activities and getting to know fellow students"
+        },
+        "audience": "This was a beginner-friendly hike suitable for all fitness levels. Perfect for nature lovers and those wanting to explore Bavaria beyond Munich.",
+        "time": "Full Day Event",
+        "location": "Partnach Gorge",
+        "address": "Garmisch-Partenkirchen",
+        "capacity": "35 participants"
+      }
+    }
+  },
+  "projects": {
+    "title": "Ongoing Projects",
+    "viewArchive": "View project archive",
+    "items": {
+      "mentorship": {
+        "title": "Freshmen Mentorship Program",
+        "description": "A comprehensive guide and buddy system helping new Albanian students navigate the TUM campus, registration processes, and life in Munich.",
+        "category": "Support"
+      },
+      "techSummit": {
+        "title": "Balkan Tech Summit",
+        "description": "A collaborative initiative with other Balkan student societies to host a semesterly tech conference featuring industry leaders and professors.",
+        "category": "Networking"
+      },
+      "language": {
+        "title": "Albanian Language & Culture",
+        "description": "Weekly sessions for students interested in learning the Albanian language or diving deeper into our rich history, literature, and traditions.",
+        "category": "Education"
+      },
+      "charity": {
+        "title": "Charity Run 2024",
+        "description": "Raising funds for educational supplies for schools in rural Kosovo and Albania. Join us for a 5k run through the English Garden.",
+        "category": "Community"
+      }
+    },
+    "details": {
+      "getInvolved": "Get Involved",
+      "learnMore": "Learn More",
+      "overview": "Project Overview",
+      "objectives": "Key Objectives",
+      "howItWorks": "How It Works",
+      "impact": "Impact & Results",
+      "joinProject": "Join This Project",
+      "openToAll": "Open to all students",
+      "interestedTitle": "Interested in Contributing?",
+      "interestedDescription": "We're always looking for motivated students to join our projects and make a difference in the community.",
+      "volunteer": "Become a Volunteer",
+      "contactUs": "Contact Us",
+      "mentorship": {
+        "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
+        "longDescription": "The Freshmen Mentorship Program pairs incoming Albanian students at TUM with experienced upper-year students who guide them through their first semester. From navigating bureaucracy to finding the best study spots, our mentors are here to help.",
+        "impact": "Starting university in a new country can be overwhelming. Our program ensures that every new student has a friendly face to turn to, making the transition smoother and helping them feel at home in Munich from day one.",
+        "objectives": {
+          "0": {
+            "title": "Smooth Academic Transition",
+            "description": "Help freshmen understand TUM's course registration, exam systems, and academic resources to set them up for success."
+          },
+          "1": {
+            "title": "Social Integration",
+            "description": "Facilitate connections between new and current students, creating a supportive community and lasting friendships."
+          },
+          "2": {
+            "title": "Practical Munich Guidance",
+            "description": "Share insider knowledge about housing, transportation, student discounts, and the best places to study and socialize."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Match & Meet",
+            "description": "New students are paired with mentors based on their program and interests."
+          },
+          "1": {
+            "title": "Guided Onboarding",
+            "description": "Mentors help with enrollment, finding accommodation, and settling into Munich."
+          },
+          "2": {
+            "title": "Ongoing Support",
+            "description": "Regular check-ins throughout the first semester to answer questions and provide guidance."
+          }
+        },
+        "stats": {
+          "participants": "45+",
+          "events": "12",
+          "hours": "200+",
+          "satisfaction": "98%"
+        },
+        "timeline": "Ongoing - Every Semester",
+        "teamSize": "8 Coordinators + 20 Mentors",
+        "status": "Active Recruitment",
+        "coordinator": "Yll Kryeziu"
+      },
+      "tech-summit": {
+        "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop",
+        "longDescription": "The Balkan Tech Summit is a collaborative conference organized by Albanian, Serbian, Croatian, and other Balkan student societies at TUM. We bring together industry professionals, professors, and students for a day of tech talks, workshops, and networking.",
+        "impact": "This summit provides a platform for Balkan students to showcase their talents, learn from leaders in tech, and build connections that span across borders and industries.",
+        "objectives": {
+          "0": {
+            "title": "Industry-Academia Bridge",
+            "description": "Connect students with tech professionals and professors to explore research opportunities and career paths."
+          },
+          "1": {
+            "title": "Knowledge Sharing",
+            "description": "Host workshops on cutting-edge technologies like AI, cloud computing, and cybersecurity."
+          },
+          "2": {
+            "title": "Regional Collaboration",
+            "description": "Foster unity among Balkan student groups and promote cross-cultural professional networks."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Plan & Partner",
+            "description": "Coordinate with other Balkan societies and secure speakers from top tech companies."
+          },
+          "1": {
+            "title": "Workshops & Talks",
+            "description": "Host technical workshops, keynote presentations, and panel discussions."
+          },
+          "2": {
+            "title": "Network & Connect",
+            "description": "Facilitate networking sessions with food, music, and informal conversations."
+          }
+        },
+        "stats": {
+          "participants": "200+",
+          "events": "2",
+          "hours": "16",
+          "satisfaction": "95%"
+        },
+        "timeline": "Semesterly Event",
+        "teamSize": "15 Organizers across societies",
+        "status": "Planning Spring 2025",
+        "coordinator": "Ersjan Keri"
+      },
+      "language": {
+        "image": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=2073&auto=format&fit=crop",
+        "longDescription": "Our language and culture sessions offer weekly meetings where students can learn Albanian, discuss Albanian literature and history, or simply practice speaking in their mother tongue. It's a space to celebrate and preserve our linguistic heritage.",
+        "impact": "Many second-generation Albanian students want to reconnect with their roots. These sessions provide a supportive environment to learn or improve Albanian while exploring the rich cultural traditions of our homeland.",
+        "objectives": {
+          "0": {
+            "title": "Language Proficiency",
+            "description": "Help students learn or improve their Albanian through structured lessons and conversational practice."
+          },
+          "1": {
+            "title": "Cultural Preservation",
+            "description": "Explore Albanian literature, poetry, folk tales, and historical events to deepen cultural understanding."
+          },
+          "2": {
+            "title": "Community Building",
+            "description": "Create a welcoming space for students to connect through shared language and heritage."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Weekly Lessons",
+            "description": "Structured language sessions covering grammar, vocabulary, and pronunciation."
+          },
+          "1": {
+            "title": "Cultural Deep Dives",
+            "description": "Monthly discussions on Albanian history, literature, and traditions."
+          },
+          "2": {
+            "title": "Practice & Connect",
+            "description": "Informal conversation groups to practice speaking and build fluency."
+          }
+        },
+        "stats": {
+          "participants": "25",
+          "events": "20",
+          "hours": "40",
+          "satisfaction": "92%"
+        },
+        "timeline": "Weekly Sessions",
+        "teamSize": "3 Instructors",
+        "status": "Open for New Students",
+        "coordinator": "Erin Kerciku"
+      },
+      "charity": {
+        "image": "https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?q=80&w=2074&auto=format&fit=crop",
+        "longDescription": "The Charity Run 2024 is our flagship fundraising event to support education in underserved areas of Kosovo and Albania. Participants run 5km through Munich's English Garden, with all proceeds going toward school supplies, books, and educational materials.",
+        "impact": "Education transforms lives. By raising funds for schools in rural areas, we're helping to provide children with the tools they need to learn, grow, and build brighter futures.",
+        "objectives": {
+          "0": {
+            "title": "Fundraising for Education",
+            "description": "Raise €5,000 to purchase school supplies, books, and learning materials for rural schools."
+          },
+          "1": {
+            "title": "Community Engagement",
+            "description": "Unite students, alumni, and the wider Munich community in support of a meaningful cause."
+          },
+          "2": {
+            "title": "Awareness Building",
+            "description": "Highlight the educational challenges faced by children in remote areas of the Balkans."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Register & Fundraise",
+            "description": "Participants register for the run and create personal fundraising pages."
+          },
+          "1": {
+            "title": "Run for a Cause",
+            "description": "5km run through the English Garden with refreshments and music."
+          },
+          "2": {
+            "title": "Distribute Donations",
+            "description": "Partner with local NGOs to deliver supplies directly to schools in need."
+          }
+        },
+        "stats": {
+          "participants": "150",
+          "events": "1",
+          "hours": "3",
+          "satisfaction": "97%"
+        },
+        "timeline": "Annual - Summer 2024",
+        "teamSize": "10 Volunteers",
+        "status": "Planning Next Edition",
+        "coordinator": "Altin Azizi"
+      }
+    }
   }
 }

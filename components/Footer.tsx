@@ -21,8 +21,8 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest">{t('footer.contact')}</h4>
             <div className="space-y-4">
-              <a href="mailto:info@tum-albanian.de" className="flex items-center gap-3 text-gray-600 hover:text-albanian-red transition-colors group">
-                <span className="text-sm border-b border-transparent group-hover:border-albanian-red pb-0.5 transition-all">info@tum-albanian.de</span>
+              <a href="mailto:tumalbaniansociety@gmail.com" className="flex items-center gap-3 text-gray-600 hover:text-albanian-red transition-colors group">
+                <span className="text-sm border-b border-transparent group-hover:border-albanian-red pb-0.5 transition-all">tumalbaniansociety@gmail.com</span>
               </a>
               <div className="flex items-start gap-3 text-gray-600">
                 <span className="text-sm leading-relaxed">
@@ -37,10 +37,10 @@ export const Footer: React.FC = () => {
           <div>
              <h4 className="font-bold text-gray-900 mb-6 uppercase text-xs tracking-widest">{t('footer.connect')}</h4>
              <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-albanian-red hover:text-white hover:border-albanian-red transition-all duration-300">
+                <a href="https://www.instagram.com/albanian_students_tum/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-albanian-red hover:text-white hover:border-albanian-red transition-all duration-300">
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-kosovar-blue hover:text-white hover:border-kosovar-blue transition-all duration-300">
+                <a href="https://www.linkedin.com/company/tum-albanian-student-society/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-kosovar-blue hover:text-white hover:border-kosovar-blue transition-all duration-300">
                   <Linkedin className="w-5 h-5" />
                 </a>
              </div>

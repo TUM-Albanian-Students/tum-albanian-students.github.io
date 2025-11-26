@@ -5,6 +5,8 @@ import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { EventDetailPage } from './pages/EventDetailPage';
+import { ProjectDetailPage } from './pages/ProjectDetailPage';
 
 // Intelligent scrolling component
 const ScrollHandler = () => {
@@ -49,8 +51,10 @@ const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/events" element={<HomePage />} />
+            <Route path="/events/:eventId" element={<EventDetailPage />} />
             <Route path="/team" element={<HomePage />} />
             <Route path="/projects" element={<HomePage />} />
+            <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>

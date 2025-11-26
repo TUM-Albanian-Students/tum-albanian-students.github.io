@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/Button';
 import { useTranslation } from 'react-i18next';
 import { loadProjects, Project } from '../utils/contentLoader';
@@ -17,7 +18,7 @@ export const DiscoverProjects: React.FC = () => {
 
       <div className="border-t border-gray-200">
         {projects.map((project) => (
-          <div key={project.id} className="group border-b border-gray-200 py-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-start hover:bg-gray-50 transition-colors px-4 -mx-4 cursor-default">
+          <Link key={project.id} to={`/projects/${project.id}`} className="group border-b border-gray-200 py-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-start hover:bg-gray-50 transition-colors px-4 -mx-4 cursor-pointer block">
             <div className="md:col-span-3">
               <span className="inline-block py-1 px-2 border border-gray-200 rounded text-[10px] font-bold tracking-widest text-gray-500 uppercase group-hover:border-albanian-red group-hover:text-albanian-red transition-colors">
                 {t(`projects.items.${project.category}.category`)}
@@ -41,7 +42,7 @@ export const DiscoverProjects: React.FC = () => {
                   <span className="text-lg leading-none mb-1">→</span>
                </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

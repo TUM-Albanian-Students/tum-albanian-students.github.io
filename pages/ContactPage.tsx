@@ -14,11 +14,15 @@ export const ContactPage: React.FC = () => {
                         <h3 className="font-serif text-lg font-medium text-gray-900 border-b border-gray-100 pb-2">{t('contact.info')}</h3>
                         <p className="flex flex-col">
                             <span className="font-bold text-gray-400 uppercase text-[10px] tracking-widest mb-1">{t('contact.email')}</span>
-                            <a href="mailto:info@tum-albanian.de" className="text-albanian-red hover:underline decoration-albanian-red/30 underline-offset-4 font-medium">info@tum-albanian.de</a>
+                            <a href="mailto:tumalbaniansociety@gmail.com" className="text-albanian-red hover:underline decoration-albanian-red/30 underline-offset-4 font-medium">tumalbaniansociety@gmail.com</a>
                         </p>
                         <p className="flex flex-col">
-                            <span className="font-bold text-gray-400 uppercase text-[10px] tracking-widest mb-1">{t('contact.social')}</span>
-                            <a href="#" className="text-gray-900 hover:text-kosovar-blue transition-colors">@tum.albanian</a>
+                            <span className="font-bold text-gray-400 uppercase text-[10px] tracking-widest mb-1">Instagram</span>
+                            <a href="https://www.instagram.com/albanian_students_tum/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-kosovar-blue transition-colors">@albanian_students_tum</a>
+                        </p>
+                        <p className="flex flex-col">
+                            <span className="font-bold text-gray-400 uppercase text-[10px] tracking-widest mb-1">LinkedIn</span>
+                            <a href="https://www.linkedin.com/company/tum-albanian-student-society/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-kosovar-blue transition-colors">TUM Albanian Student Society</a>
                         </p>
                     </div>
                     <div className="space-y-4">
