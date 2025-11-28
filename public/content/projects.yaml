@@ -1,20 +1,10 @@
 projects:
-  - id: mentorship
-    title: mentorship
-    description: mentorship
+  - id: albuddy
+    title: albuddy
+    description: albuddy
     category: mentorship
 
-  - id: tech-summit
-    title: techSummit
-    description: techSummit
-    category: techSummit
-
-  - id: language
-    title: language
-    description: language
-    category: language
-
-  - id: charity
-    title: charity
-    description: charity
-    category: charity
+  - id: kafeneja
+    title: kafeneja
+    description: kafeneja
+    category: social
