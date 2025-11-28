@@ -37,25 +37,59 @@
     "title": "Laufende Projekte",
     "viewArchive": "Projektarchiv anzeigen",
     "items": {
-      "mentorship": {
-        "title": "Erstsemester-Mentorenprogramm",
-        "description": "Ein umfassender Leitfaden und Buddy-System, das neuen albanischen Studierenden hilft, sich auf dem TUM-Campus, bei Anmeldeprozessen und im Leben in München zurechtzufinden.",
-        "category": "Unterstützung"
-      },
-      "techSummit": {
-        "title": "Balkan Tech Summit",
-        "description": "Eine Kooperationsinitiative mit anderen balkanischen Studentenvereinigungen, um eine semesterweise Tech-Konferenz mit Branchenführern und Professoren zu veranstalten.",
-        "category": "Networking"
-      },
-      "language": {
-        "title": "Albanische Sprache & Kultur",
-        "description": "Wöchentliche Sitzungen für Studierende, die die albanische Sprache lernen oder tiefer in unsere reiche Geschichte, Literatur und Traditionen eintauchen möchten.",
-        "category": "Bildung"
-      },
-      "charity": {
-        "title": "Wohltätigkeitslauf 2024",
-        "description": "Spendensammlung für Schulmaterialien für Schulen im ländlichen Kosovo und Albanien. Begleiten Sie uns bei einem 5-km-Lauf durch den Englischen Garten.",
-        "category": "Gemeinschaft"
+      "albuddy": {
+        "title": "Munich ALBuddy Programm",
+        "description": "Ein Mentoring-Netzwerk, das neue albanische und kosovarische Studierende mit erfahrenen Mentoren an der TUM, LMU und Hochschule München verbindet.",
+        "category": "Mentoring"
+      }
+    },
+    "details": {
+      "getInvolved": "Mitmachen",
+      "learnMore": "Mehr Erfahren",
+      "overview": "Projektübersicht",
+      "objectives": "Hauptziele",
+      "howItWorks": "So Funktioniert Es",
+      "impact": "Auswirkungen & Ergebnisse",
+      "joinProject": "Projekt Beitreten",
+      "openToAll": "Offen für alle Studierenden",
+      "interestedTitle": "Interessiert Mitzuwirken?",
+      "interestedDescription": "Wir suchen immer motivierte Studierende, die sich unseren Projekten anschließen und einen Unterschied in der Gemeinschaft machen möchten.",
+      "volunteer": "Freiwilliger Werden",
+      "contactUs": "Kontaktieren Sie Uns",
+      "albuddy": {
+        "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
+        "longDescription": "Das Munich ALBuddy Programm ist ein Mentoring-Netzwerk für albanische und kosovarische Studierende an der TUM, LMU und Hochschule München. Wir verbinden neue Studierende (Mentees) mit erfahrenen Mentoren, die bei allem helfen, vom Studium bis zum Finden der besten Restaurants in München.",
+        "impact": "Der Start an der Universität in einer neuen Stadt kann schwierig sein, aber du musst es nicht alleine schaffen. Unser Ziel ist es, dich mit einem freundlichen Gesicht zu verbinden, das dir bei allem helfen kann.",
+        "objectives": {
+          "0": {
+            "title": "Mentees & Mentoren Verbinden",
+            "description": "Neue Studierende mit erfahrenen Studierenden zusammenbringen, die bereit sind zu helfen."
+          },
+          "1": {
+            "title": "Akademische Unterstützung",
+            "description": "Beratung bei Kurswahl, Lerntechniken und Campus-Ressourcen."
+          },
+          "2": {
+            "title": "Leben in München",
+            "description": "Hilfe bei Wohnungssuche, Transport und Entdeckung der besten Orte in der Stadt."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Registrieren",
+            "description": "Melde dich als Mentee oder Mentor über unser Anmeldeformular an."
+          },
+          "1": {
+            "title": "Matching",
+            "description": "Wir bringen euch basierend auf eurer Universität, eurem Studiengang und euren Interessen zusammen."
+          },
+          "2": {
+            "title": "Verbinden & Wachsen",
+            "description": "Triff deinen Buddy und beginne, eine dauerhafte Verbindung aufzubauen."
+          }
+        },
+        "timeline": "Jedes Semester",
+        "status": "Aktive Anmeldung"
       }
     }
   },

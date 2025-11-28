@@ -37,25 +37,99 @@
     "title": "Projekte në Vazhdim",
     "viewArchive": "Shiko arkivin e projekteve",
     "items": {
-      "mentorship": {
-        "title": "Programi i Mentorimit për të Sapoardhurit",
-        "description": "Një udhëzues gjithëpërfshirës dhe sistem shokësh që ndihmon studentët e rinj shqiptarë të lundrojnë në kampusin e TUM, proceset e regjistrimit dhe jetën në Mynih.",
-        "category": "Mbështetje"
+      "albuddy": {
+        "title": "Programi Munich ALBuddy",
+        "description": "Një rrjet mentorimi që lidh studentët e rinj shqiptarë dhe kosovarë me mentorë me përvojë në TUM, LMU dhe Hochschule München.",
+        "category": "Mentorimi"
       },
-      "techSummit": {
-        "title": "Samiti Teknik i Ballkanit",
-        "description": "Një iniciativë bashkëpunuese me shoqëri të tjera studentore ballkanike për të organizuar një konferencë teknike semestrale me liderë të industrisë dhe profesorë.",
-        "category": "Rrjetëzim"
+      "kafeneja": {
+        "title": "Kafeneja Jonë: Kafe & Biseda",
+        "description": "Takime të rregullta me kafe për studentët shqiptarë për t'u lidhur dhe socializuar në një atmosferë të relaksuar në TUM.",
+        "category": "Sociale"
+      }
+    },
+    "details": {
+      "getInvolved": "Përfshihu",
+      "learnMore": "Mëso Më Shumë",
+      "overview": "Përmbledhje e Projektit",
+      "objectives": "Objektivat Kryesore",
+      "howItWorks": "Si Funksionon",
+      "impact": "Ndikimi & Rezultatet",
+      "joinProject": "Bashkohu me Projektin",
+      "openToAll": "I hapur për të gjithë studentët",
+      "interestedTitle": "Të Interesuar për të Kontribuar?",
+      "interestedDescription": "Ne gjithmonë po kërkojmë studentë të motivuar për t'u bashkuar me projektet tona dhe të bëjnë ndryshim në komunitet.",
+      "volunteer": "Bëhu Vullnetar",
+      "contactUs": "Na Kontaktoni",
+      "albuddy": {
+        "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
+        "longDescription": "Programi Munich ALBuddy është një rrjet mentorimi për studentët shqiptarë dhe kosovarë në TUM, LMU dhe Hochschule München. Ne lidhim studentët e rinj (mentees) me mentorë me përvojë që ndihmojnë të lundrojnë çdo gjë nga akademikët deri te gjetja e ushqimit më të mirë në Mynih.",
+        "impact": "Fillimi i universitetit në një qytet të ri mund të jetë i vështirë, por nuk duhet ta bëni vetëm. Qëllimi ynë është t'ju lidhim me një fytyrë miqësore që mund t'ju ndihmojë të lundrojnë çdo gjë.",
+        "objectives": {
+          "0": {
+            "title": "Lidh Mentees & Mentorët",
+            "description": "Përputhim studentët e rinj me studentë me përvojë të gatshëm për të ndihmuar."
+          },
+          "1": {
+            "title": "Mbështetje Akademike",
+            "description": "Udhëzim për zgjedhjen e kurseve, teknikat e studimit dhe burimet e kampusit."
+          },
+          "2": {
+            "title": "Jeta në Mynih",
+            "description": "Ndihmë me strehimin, transportin dhe zbulimin e vendeve më të mira në qytet."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Regjistrohu",
+            "description": "Regjistrohu si mentee ose mentor përmes formularit tonë të regjistrimit."
+          },
+          "1": {
+            "title": "Përputhu",
+            "description": "Ne ju përputhim bazuar në universitetin, programin dhe interesat tuaja."
+          },
+          "2": {
+            "title": "Lidhu & Rritu",
+            "description": "Takoni shokun tuaj dhe filloni të ndërtoni një lidhje të qëndrueshme."
+          }
+        },
+        "timeline": "Çdo Semestër",
+        "status": "Regjistrim Aktiv"
       },
-      "language": {
-        "title": "Gjuha dhe Kultura Shqiptare",
-        "description": "Sesione javore për studentë të interesuar të mësojnë gjuhën shqipe ose të zhyten më thellë në historinë, letërsinë dhe traditat tona të pasura.",
-        "category": "Edukim"
-      },
-      "charity": {
-        "title": "Vrapimi Bamirës 2024",
-        "description": "Duke mbledhur fonde për materiale arsimore për shkolla në zonat rurale të Kosovës dhe Shqipërisë. Bashkohuni me ne për një vrapim 5 km nëpër Kopshtin Anglez.",
-        "category": "Komunitet"
+      "kafeneja": {
+        "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=2074&auto=format&fit=crop",
+        "longDescription": "Kafeneja Jonë është një takim i rregullt me kafe ku studentët shqiptarë mblidhen për të marrë një pushim nga studimet, për të biseduar dhe për t'u lidhur në një atmosferë të relaksuar. Është një mënyrë e thjeshtë për të ndërtuar miqësi dhe për t'u ndjerë si në shtëpi në Mynih.",
+        "impact": "Keni nevojë për një pushim nga studimet? Bashkohuni me ne për kafe dhe njihuni me studentë të tjerë shqiptarë në një atmosferë të relaksuar. E përkryer për të bërë miq të rinj dhe për të qëndruar të lidhur me komunitetin.",
+        "objectives": {
+          "0": {
+            "title": "Lidhje Sociale",
+            "description": "Krijoni një hapësirë të relaksuar për studentët shqiptarë që të takohën dhe të socializojnë."
+          },
+          "1": {
+            "title": "Ndërtimi i Komunitetit",
+            "description": "Nxitni miqësitë dhe ndjenjën e përkatësisë ndër studentë."
+          },
+          "2": {
+            "title": "Takime të Rregullta",
+            "description": "Vendosni një vend takimi të qëndrueshëm për komunitetin e studentëve shqiptarë."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Shfaquni",
+            "description": "Thjesht ejani në kafene në kohën e caktuar - nuk kërkohet regjistrim."
+          },
+          "1": {
+            "title": "Merrni një Kafe",
+            "description": "Porositni pijen tuaj të preferuar dhe gjeni një vend me grupin."
+          },
+          "2": {
+            "title": "Lidhuni",
+            "description": "Bisedoni, relaksohuni dhe njihuni me studentë të tjerë shqiptarë."
+          }
+        },
+        "timeline": "Takime të Rregullta",
+        "status": "Në Vazhdim"
       }
     }
   },
