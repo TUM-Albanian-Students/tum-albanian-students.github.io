@@ -38,6 +38,10 @@
   "projects": {
     "title": "Projekte në Vazhdim",
     "viewArchive": "Shiko arkivin e projekteve",
+    "categories": {
+      "mentorship": "Mentorimi",
+      "social": "Sociale"
+    },
     "items": {
       "albuddy": {
         "title": "Programi Munich ALBuddy",
@@ -92,9 +96,7 @@
             "title": "Lidhu & Rritu",
             "description": "Takoni shokun tuaj dhe filloni të ndërtoni një lidhje të qëndrueshme."
           }
-        },
-        "timeline": "Çdo Semestër",
-        "status": "Regjistrim Aktiv"
+        }
       },
       "kafeneja": {
         "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=2074&auto=format&fit=crop",
@@ -126,9 +128,7 @@
             "title": "Lidhuni",
             "description": "Bisedoni, relaksohuni dhe njihuni me studentë të tjerë shqiptarë."
           }
-        },
-        "timeline": "Takime të Rregullta",
-        "status": "Në Vazhdim"
+        }
       }
     }
   },
@@ -137,6 +137,8 @@
     "description": "Njihuni me studentët e përkushtuar që punojnë prapa skenave për ta bërë shoqërinë një shtëpi për të gjithë. Ne gjithmonë po kërkojmë vullnetarë të rinj.",
     "roles": {
       "president": "President",
+      "Co-Founder & President": "Bashkëthemeluesi & Presidenti",
+      "Co-Founder": "Bashkëthemeluesi",
       "vicePresident": "Nënpresident",
       "eventCoordinator": "Koordinator Ngjarjesh",
       "financeHead": "Drejtues Financash"

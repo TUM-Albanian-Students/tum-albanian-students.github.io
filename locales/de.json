@@ -38,6 +38,10 @@
   "projects": {
     "title": "Laufende Projekte",
     "viewArchive": "Projektarchiv anzeigen",
+    "categories": {
+      "mentorship": "Mentoring",
+      "social": "Sozial"
+    },
     "items": {
       "albuddy": {
         "title": "Munich ALBuddy Programm",
@@ -92,9 +96,7 @@
             "title": "Verbinden & Wachsen",
             "description": "Triff deinen Buddy und beginne, eine dauerhafte Verbindung aufzubauen."
           }
-        },
-        "timeline": "Jedes Semester",
-        "status": "Aktive Anmeldung"
+        }
       },
       "kafeneja": {
         "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=2074&auto=format&fit=crop",
@@ -126,9 +128,7 @@
             "title": "Vernetzen",
             "description": "Plaudern, entspannen und andere albanische Studierende kennenlernen."
           }
-        },
-        "timeline": "Regelmäßige Treffen",
-        "status": "Laufend"
+        }
       }
     }
   },
@@ -137,6 +137,8 @@
     "description": "Lernen Sie die engagierten Studierenden kennen, die hinter den Kulissen arbeiten, um die Vereinigung zu einem Zuhause für alle zu machen. Wir suchen immer nach neuen Freiwilligen.",
     "roles": {
       "president": "Präsident",
+      "Co-Founder & President": "Mitgründer & Präsident",
+      "Co-Founder": "Mitgründer",
       "vicePresident": "Vizepräsident",
       "eventCoordinator": "Veranstaltungskoordinator",
       "financeHead": "Finanzleiter"

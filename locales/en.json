@@ -34,7 +34,7 @@
     "register": "Register",
     "gallery": "Gallery",
     "past": "Past",
-    "details": {
+    "eventDetails": {
       "whatToExpect": "What to Expect",
       "whoShouldAttend": "Who Should Attend",
       "registerNow": "Register Now",
@@ -71,15 +71,21 @@
           "1": "Discuss academic and career challenges",
           "2": "Perspectives on being a student in the diaspora"
         },
+        "audience": "Open to all students interested in discussing academic life and challenges in the diaspora.",
         "time": "15:00",
         "location": "TUM Main Campus",
-        "address": "Room 0505.Z1.534, Arcisstraße 21"
+        "address": "Room 0505.Z1.534, Arcisstraße 21",
+        "capacity": "40 participants"
       }
     }
   },
   "projects": {
     "title": "Ongoing Projects",
     "viewArchive": "View project archive",
+    "categories": {
+      "mentorship": "Mentorship",
+      "social": "Social"
+    },
     "items": {
       "albuddy": {
         "title": "Munich ALBuddy Program",
@@ -134,9 +140,7 @@
             "title": "Connect & Grow",
             "description": "Meet your buddy and start building a lasting connection."
           }
-        },
-        "timeline": "Every Semester",
-        "status": "Active Registration"
+        }
       },
       "kafeneja": {
         "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=2074&auto=format&fit=crop",
@@ -168,9 +172,7 @@
             "title": "Connect",
             "description": "Chat, relax, and get to know fellow Albanian students."
           }
-        },
-        "timeline": "Regular Meetups",
-        "status": "Ongoing"
+        }
       }
     }
   },
@@ -179,6 +181,8 @@
     "description": "Meet the dedicated students working behind the scenes to make the society a home for everyone. We are always looking for new volunteers.",
     "roles": {
       "president": "President",
+      "Co-Founder & President": "Co-Founder & President",
+      "Co-Founder": "Co-Founder",
       "vicePresident": "Vice President",
       "eventCoordinator": "Event Coordinator",
       "financeHead": "Finance Head"
