@@ -24,10 +24,12 @@
     "description": "Von akademischen Workshops und Karrieremessen bis hin zu Kulturnächten und lockeren Treffen kuratieren wir Erlebnisse, die den albanischen Geist ins Herz Bayerns bringen.",
     "quote": "Wissen bereichert Kultur, und Kultur inspiriert Wissen.",
     "viewCalendar": "Vollständigen Kalender anzeigen",
-    "flagDay": "Flaggentag-Gala",
-    "flagDayDate": "28. November • Bevorstehend",
-    "techTalks": "Tech Talks Serie",
-    "alpsExcursion": "Alpen-Ausflug",
+    "internationalDay": "TUM Internationaler Tag",
+    "internationalDayDate": "Oktober 2024 • Vergangen",
+    "semesterParty": "Semesterstart-Party",
+    "semesterPartyDate": "8. November • Vergangen",
+    "studentDialogue": "Studentendialog",
+    "studentDialogueDate": "30. November • Bevorstehend",
     "details": "Details",
     "register": "Anmelden",
     "gallery": "Galerie",
@@ -41,6 +43,11 @@
         "title": "Munich ALBuddy Programm",
         "description": "Ein Mentoring-Netzwerk, das neue albanische und kosovarische Studierende mit erfahrenen Mentoren an der TUM, LMU und Hochschule München verbindet.",
         "category": "Mentoring"
+      },
+      "kafeneja": {
+        "title": "Kafeneja Jonë: Kaffee & Gespräche",
+        "description": "Regelmäßige Kaffeetreffen für albanische Studierende zum Austausch und zur Vernetzung in entspannter Atmosphäre an der TUM.",
+        "category": "Sozial"
       }
     },
     "details": {
@@ -90,6 +97,41 @@
         },
         "timeline": "Jedes Semester",
         "status": "Aktive Anmeldung"
+      },
+      "kafeneja": {
+        "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=2074&auto=format&fit=crop",
+        "longDescription": "Kafeneja Jonë (Unser Café) ist ein regelmäßiges Kaffeetreffen, bei dem sich albanische Studierende treffen, um eine Pause vom Lernen zu machen, zu plaudern und sich in entspannter Atmosphäre zu vernetzen. Eine ungezwungene Möglichkeit, Freundschaften zu knüpfen und sich in München heimisch zu fühlen.",
+        "impact": "Brauchst du eine Pause vom Studium? Komm zu uns auf einen Kaffee und lerne andere albanische Studierende in lockerer Atmosphäre kennen. Perfekt, um neue Freunde zu finden und mit der Community verbunden zu bleiben.",
+        "objectives": {
+          "0": {
+            "title": "Soziale Vernetzung",
+            "description": "Schaffe einen entspannten Raum für albanische Studierende zum Treffen und Austauschen."
+          },
+          "1": {
+            "title": "Community-Aufbau",
+            "description": "Fördere Freundschaften und ein Gefühl der Zugehörigkeit unter Studierenden."
+          },
+          "2": {
+            "title": "Regelmäßige Treffen",
+            "description": "Etabliere einen festen Treffpunkt für die albanische Studierendengemeinschaft."
+          }
+        },
+        "steps": {
+          "0": {
+            "title": "Vorbeikommen",
+            "description": "Komm einfach zur geplanten Zeit ins Café - keine Anmeldung erforderlich."
+          },
+          "1": {
+            "title": "Kaffee Holen",
+            "description": "Bestelle dein Lieblingsgetränk und finde einen Platz bei der Gruppe."
+          },
+          "2": {
+            "title": "Vernetzen",
+            "description": "Plaudern, entspannen und andere albanische Studierende kennenlernen."
+          }
+        },
+        "timeline": "Regelmäßige Treffen",
+        "status": "Laufend"
       }
     }
   },

@@ -24,10 +24,12 @@
     "description": "From academic workshops and career fairs to cultural nights and casual meetups, we curate experiences that bring the Albanian spirit to the heart of Bavaria.",
     "quote": "Knowledge enhances culture, and culture inspires knowledge.",
     "viewCalendar": "View full calendar",
-    "flagDay": "Flag Day Gala",
-    "flagDayDate": "November 28 • Upcoming",
-    "techTalks": "Tech Talks Series",
-    "alpsExcursion": "Alps Excursion",
+    "internationalDay": "TUM International Day",
+    "internationalDayDate": "October 2024 • Past",
+    "semesterParty": "Semester Start Party",
+    "semesterPartyDate": "November 8 • Past",
+    "studentDialogue": "Student Dialogue",
+    "studentDialogueDate": "November 30 • Upcoming",
     "details": "Details",
     "register": "Register",
     "gallery": "Gallery",
@@ -38,50 +40,40 @@
       "registerNow": "Register Now",
       "freeForMembers": "Free for members",
       "viewGallery": "View Gallery",
-      "flag-day-gala": {
-        "subtitle": "Celebrating Albanian Independence and Culture",
-        "description": "Join us for an elegant evening celebrating Albanian Flag Day and Independence Day. This gala brings together students, alumni, and friends for a night of traditional music, authentic Albanian cuisine, and meaningful connections.",
+      "international-day": {
+        "subtitle": "Representing Albania & Kosovo at TUM",
+        "description": "We had the honor of representing Albania and Kosovo at the TUM CIT International Day, sharing our rich history, vibrant traditions, and cultural heritage with the TUM community.",
         "highlights": {
-          "0": "Traditional Albanian dinner with regional specialties from Kosovo, Albania, and the diaspora",
-          "1": "Live folk music performance featuring traditional Albanian instruments",
-          "2": "Historical presentation on the significance of Flag Day and Albanian independence",
-          "3": "Networking opportunity with Albanian professionals and TUM alumni"
+          "0": "Cultural booth showcasing Albanian and Kosovar traditions",
+          "1": "Interactive presentations about our history and heritage",
+          "2": "Connecting with students from diverse backgrounds"
         },
-        "audience": "This event is open to all students, particularly those interested in Albanian culture, history, and heritage. Whether you're Albanian, from the Balkans, or simply curious about our rich traditions, you're welcome to join us.",
-        "time": "18:00 - 23:00",
-        "location": "TUM Main Building",
-        "address": "Arcisstraße 21, 80333 München",
-        "capacity": "120 guests"
-      },
-      "tech-talks": {
-        "subtitle": "Industry Insights from Albanian Tech Leaders",
-        "description": "A monthly series featuring successful Albanian professionals in tech sharing their journey, insights, and advice. Each session includes a presentation, Q&A, and networking time.",
-        "highlights": {
-          "0": "Hear from Albanian engineers at major tech companies (Google, Microsoft, startups)",
-          "1": "Learn about career paths, interview preparation, and industry trends",
-          "2": "Network with peers and professionals in an informal setting",
-          "3": "Get personalized advice for your career goals"
-        },
-        "audience": "Ideal for Computer Science, Informatics, and Engineering students looking to learn from experienced professionals and expand their network in the tech industry.",
-        "time": "18:30 - 20:30",
-        "location": "TUM Informatics Building",
-        "address": "Boltzmannstraße 3, 85748 Garching",
-        "capacity": "50 participants"
-      },
-      "alps-excursion": {
-        "subtitle": "A Day in the Bavarian Alps",
-        "description": "Our annual hiking trip brought together over 30 students for a day of adventure in the beautiful Bavarian Alps. Starting from Garmisch-Partenkirchen, we hiked to the Partnach Gorge and enjoyed stunning mountain views.",
-        "highlights": {
-          "0": "Scenic hike through Partnach Gorge with waterfalls and rock formations",
-          "1": "Traditional Bavarian lunch at a mountain hut",
-          "2": "Group photos at the summit with panoramic alpine views",
-          "3": "Team building activities and getting to know fellow students"
-        },
-        "audience": "This was a beginner-friendly hike suitable for all fitness levels. Perfect for nature lovers and those wanting to explore Bavaria beyond Munich.",
         "time": "Full Day Event",
-        "location": "Partnach Gorge",
-        "address": "Garmisch-Partenkirchen",
-        "capacity": "35 participants"
+        "location": "TUM CIT Campus"
+      },
+      "semester-party": {
+        "subtitle": "Kick Off the Semester in Style",
+        "description": "Join us to celebrate the start of the new semester! Bring your friends and enjoy an evening of music, drinks, and good vibes with the Albanian student community.",
+        "highlights": {
+          "0": "DJ and music all night",
+          "1": "Drinks and refreshments",
+          "2": "Connect with fellow Albanian students"
+        },
+        "time": "20:00",
+        "location": "Munich",
+        "address": "Nymphenburgerstr. 99"
+      },
+      "student-dialogue": {
+        "subtitle": "Discussion with Prof. Dr. Albena Reshitaj",
+        "description": "An exclusive dialogue with Prof. Dr. Albena Reshitaj (Professor of Medicine & MP). Engage in an open discussion about academic challenges, expertise, and perspectives for students in the diaspora.",
+        "highlights": {
+          "0": "Q&A with Prof. Dr. Reshitaj",
+          "1": "Discuss academic and career challenges",
+          "2": "Perspectives on being a student in the diaspora"
+        },
+        "time": "15:00",
+        "location": "TUM Main Campus",
+        "address": "Room 0505.Z1.534, Arcisstraße 21"
       }
     }
   },
@@ -234,10 +226,12 @@
     "description": "From academic workshops and career fairs to cultural nights and casual meetups, we curate experiences that bring the Albanian spirit to the heart of Bavaria.",
     "quote": "Knowledge enhances culture, and culture inspires knowledge.",
     "viewCalendar": "View full calendar",
-    "flagDay": "Flag Day Gala",
-    "flagDayDate": "November 28 • Upcoming",
-    "techTalks": "Tech Talks Series",
-    "alpsExcursion": "Alps Excursion",
+    "internationalDay": "TUM International Day",
+    "internationalDayDate": "October 2024 • Past",
+    "semesterParty": "Semester Start Party",
+    "semesterPartyDate": "November 8 • Past",
+    "studentDialogue": "Student Dialogue",
+    "studentDialogueDate": "November 30 • Upcoming",
     "details": "Details",
     "register": "Register",
     "gallery": "Gallery",
@@ -248,50 +242,40 @@
       "registerNow": "Register Now",
       "freeForMembers": "Free for members",
       "viewGallery": "View Gallery",
-      "flag-day-gala": {
-        "subtitle": "Celebrating Albanian Independence and Culture",
-        "description": "Join us for an elegant evening celebrating Albanian Flag Day and Independence Day. This gala brings together students, alumni, and friends for a night of traditional music, authentic Albanian cuisine, and meaningful connections.",
+      "international-day": {
+        "subtitle": "Representing Albania & Kosovo at TUM",
+        "description": "We had the honor of representing Albania and Kosovo at the TUM CIT International Day, sharing our rich history, vibrant traditions, and cultural heritage with the TUM community.",
         "highlights": {
-          "0": "Traditional Albanian dinner with regional specialties from Kosovo, Albania, and the diaspora",
-          "1": "Live folk music performance featuring traditional Albanian instruments",
-          "2": "Historical presentation on the significance of Flag Day and Albanian independence",
-          "3": "Networking opportunity with Albanian professionals and TUM alumni"
+          "0": "Cultural booth showcasing Albanian and Kosovar traditions",
+          "1": "Interactive presentations about our history and heritage",
+          "2": "Connecting with students from diverse backgrounds"
         },
-        "audience": "This event is open to all students, particularly those interested in Albanian culture, history, and heritage. Whether you're Albanian, from the Balkans, or simply curious about our rich traditions, you're welcome to join us.",
-        "time": "18:00 - 23:00",
-        "location": "TUM Main Building",
-        "address": "Arcisstraße 21, 80333 München",
-        "capacity": "120 guests"
-      },
-      "tech-talks": {
-        "subtitle": "Industry Insights from Albanian Tech Leaders",
-        "description": "A monthly series featuring successful Albanian professionals in tech sharing their journey, insights, and advice. Each session includes a presentation, Q&A, and networking time.",
-        "highlights": {
-          "0": "Hear from Albanian engineers at major tech companies (Google, Microsoft, startups)",
-          "1": "Learn about career paths, interview preparation, and industry trends",
-          "2": "Network with peers and professionals in an informal setting",
-          "3": "Get personalized advice for your career goals"
-        },
-        "audience": "Ideal for Computer Science, Informatics, and Engineering students looking to learn from experienced professionals and expand their network in the tech industry.",
-        "time": "18:30 - 20:30",
-        "location": "TUM Informatics Building",
-        "address": "Boltzmannstraße 3, 85748 Garching",
-        "capacity": "50 participants"
-      },
-      "alps-excursion": {
-        "subtitle": "A Day in the Bavarian Alps",
-        "description": "Our annual hiking trip brought together over 30 students for a day of adventure in the beautiful Bavarian Alps. Starting from Garmisch-Partenkirchen, we hiked to the Partnach Gorge and enjoyed stunning mountain views.",
-        "highlights": {
-          "0": "Scenic hike through Partnach Gorge with waterfalls and rock formations",
-          "1": "Traditional Bavarian lunch at a mountain hut",
-          "2": "Group photos at the summit with panoramic alpine views",
-          "3": "Team building activities and getting to know fellow students"
-        },
-        "audience": "This was a beginner-friendly hike suitable for all fitness levels. Perfect for nature lovers and those wanting to explore Bavaria beyond Munich.",
         "time": "Full Day Event",
-        "location": "Partnach Gorge",
-        "address": "Garmisch-Partenkirchen",
-        "capacity": "35 participants"
+        "location": "TUM CIT Campus"
+      },
+      "semester-party": {
+        "subtitle": "Kick Off the Semester in Style",
+        "description": "Join us to celebrate the start of the new semester! Bring your friends and enjoy an evening of music, drinks, and good vibes with the Albanian student community.",
+        "highlights": {
+          "0": "DJ and music all night",
+          "1": "Drinks and refreshments",
+          "2": "Connect with fellow Albanian students"
+        },
+        "time": "20:00",
+        "location": "Munich",
+        "address": "Nymphenburgerstr. 99"
+      },
+      "student-dialogue": {
+        "subtitle": "Discussion with Prof. Dr. Albena Reshitaj",
+        "description": "An exclusive dialogue with Prof. Dr. Albena Reshitaj (Professor of Medicine & MP). Engage in an open discussion about academic challenges, expertise, and perspectives for students in the diaspora.",
+        "highlights": {
+          "0": "Q&A with Prof. Dr. Reshitaj",
+          "1": "Discuss academic and career challenges",
+          "2": "Perspectives on being a student in the diaspora"
+        },
+        "time": "15:00",
+        "location": "TUM Main Campus",
+        "address": "Room 0505.Z1.534, Arcisstraße 21"
       }
     }
   },
