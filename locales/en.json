@@ -98,7 +98,6 @@
       "overview": "Project Overview",
       "objectives": "Key Objectives",
       "howItWorks": "How It Works",
-      "impact": "Impact & Results",
       "joinProject": "Join This Project",
       "openToAll": "Open to all students",
       "interestedTitle": "Interested in Contributing?",
@@ -108,7 +107,6 @@
       "albuddy": {
         "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
         "longDescription": "The Munich ALBuddy Program is a mentorship network for Albanian and Kosovar students at TUM, LMU, and Hochschule München. We connect new students (mentees) with experienced mentors who help navigate everything from academics to finding the best food in Munich.",
-        "impact": "Starting university in a new city can be tough, but you don't have to do it alone. Our goal is to connect you with a friendly face who can help you navigate everything.",
         "objectives": {
           "0": {
             "title": "Connect Mentees & Mentors",
@@ -143,7 +141,6 @@
       "kafeneja": {
         "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=2074&auto=format&fit=crop",
         "longDescription": "Kafeneja Jonë (Our Coffee Shop) is a regular coffee meetup where Albanian students gather to take a break from studies, chat, and connect in a relaxed atmosphere. It's a casual way to build friendships and feel at home in Munich.",
-        "impact": "Need a break from your studies? Join us for coffee and get to know other Albanian students in a relaxed setting. Perfect for making new friends and staying connected with the community.",
         "objectives": {
           "0": {
             "title": "Social Connection",
@@ -220,128 +217,5 @@
     "imprint": "Imprint",
     "privacy": "Privacy",
     "cookies": "Cookies"
-  },
-  "events": {
-    "title": "Life at the Society",
-    "description": "From academic workshops and career fairs to cultural nights and casual meetups, we curate experiences that bring the Albanian spirit to the heart of Bavaria.",
-    "quote": "Knowledge enhances culture, and culture inspires knowledge.",
-    "viewCalendar": "View full calendar",
-    "internationalDay": "TUM International Day",
-    "internationalDayDate": "October 2024 • Past",
-    "semesterParty": "Semester Start Party",
-    "semesterPartyDate": "November 8 • Past",
-    "studentDialogue": "Student Dialogue",
-    "studentDialogueDate": "November 30 • Upcoming",
-    "details": "Details",
-    "register": "Register",
-    "gallery": "Gallery",
-    "past": "Past",
-    "details": {
-      "whatToExpect": "What to Expect",
-      "whoShouldAttend": "Who Should Attend",
-      "registerNow": "Register Now",
-      "freeForMembers": "Free for members",
-      "viewGallery": "View Gallery",
-      "international-day": {
-        "subtitle": "Representing Albania & Kosovo at TUM",
-        "description": "We had the honor of representing Albania and Kosovo at the TUM CIT International Day, sharing our rich history, vibrant traditions, and cultural heritage with the TUM community.",
-        "highlights": {
-          "0": "Cultural booth showcasing Albanian and Kosovar traditions",
-          "1": "Interactive presentations about our history and heritage",
-          "2": "Connecting with students from diverse backgrounds"
-        },
-        "time": "Full Day Event",
-        "location": "TUM CIT Campus"
-      },
-      "semester-party": {
-        "subtitle": "Kick Off the Semester in Style",
-        "description": "Join us to celebrate the start of the new semester! Bring your friends and enjoy an evening of music, drinks, and good vibes with the Albanian student community.",
-        "highlights": {
-          "0": "DJ and music all night",
-          "1": "Drinks and refreshments",
-          "2": "Connect with fellow Albanian students"
-        },
-        "time": "20:00",
-        "location": "Munich",
-        "address": "Nymphenburgerstr. 99"
-      },
-      "student-dialogue": {
-        "subtitle": "Discussion with Prof. Dr. Albena Reshitaj",
-        "description": "An exclusive dialogue with Prof. Dr. Albena Reshitaj (Professor of Medicine & MP). Engage in an open discussion about academic challenges, expertise, and perspectives for students in the diaspora.",
-        "highlights": {
-          "0": "Q&A with Prof. Dr. Reshitaj",
-          "1": "Discuss academic and career challenges",
-          "2": "Perspectives on being a student in the diaspora"
-        },
-        "time": "15:00",
-        "location": "TUM Main Campus",
-        "address": "Room 0505.Z1.534, Arcisstraße 21"
-      }
-    }
-  },
-  "projects": {
-    "title": "Ongoing Projects",
-    "viewArchive": "View project archive",
-    "items": {
-      "albuddy": {
-        "title": "Munich ALBuddy Program",
-        "description": "A mentorship network connecting new Albanian and Kosovar students with experienced mentors at TUM, LMU, and Hochschule München.",
-        "category": "Mentorship"
-      },
-      "kafeneja": {
-        "title": "Kafeneja Jonë: Coffee & Chats",
-        "description": "Regular coffee meetups for Albanian students to connect and socialize in a relaxed atmosphere at TUM.",
-        "category": "Social"
-      }
-    },
-    "details": {
-      "getInvolved": "Get Involved",
-      "learnMore": "Learn More",
-      "overview": "Project Overview",
-      "objectives": "Key Objectives",
-      "howItWorks": "How It Works",
-      "impact": "Impact & Results",
-      "joinProject": "Join This Project",
-      "openToAll": "Open to all students",
-      "interestedTitle": "Interested in Contributing?",
-      "interestedDescription": "We're always looking for motivated students to join our projects and make a difference in the community.",
-      "volunteer": "Become a Volunteer",
-      "contactUs": "Contact Us",
-      "albuddy": {
-        "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
-        "longDescription": "The Munich ALBuddy Program is a mentorship network for Albanian and Kosovar students at TUM, LMU, and Hochschule München. We connect new students (mentees) with experienced mentors who help navigate everything from academics to finding the best food in Munich.",
-        "impact": "Starting university in a new city can be tough, but you don't have to do it alone. Our goal is to connect you with a friendly face who can help you navigate everything.",
-        "objectives": {
-          "0": {
-            "title": "Connect Mentees & Mentors",
-            "description": "Match new students with experienced students ready to help."
-          },
-          "1": {
-            "title": "Academic Support",
-            "description": "Guidance on course selection, study techniques, and campus resources."
-          },
-          "2": {
-            "title": "Life in Munich",
-            "description": "Help with housing, transportation, and discovering the best spots in the city."
-          }
-        },
-        "steps": {
-          "0": {
-            "title": "Register",
-            "description": "Sign up as a mentee or mentor through our registration form."
-          },
-          "1": {
-            "title": "Get Matched",
-            "description": "We pair you based on your university, program, and interests."
-          },
-          "2": {
-            "title": "Connect & Grow",
-            "description": "Meet your buddy and start building a lasting connection."
-          }
-        },
-        "timeline": "Every Semester",
-        "status": "Active Registration"
-      }
-    }
   }
 }

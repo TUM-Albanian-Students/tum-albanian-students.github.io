@@ -56,7 +56,6 @@
       "overview": "Projektübersicht",
       "objectives": "Hauptziele",
       "howItWorks": "So Funktioniert Es",
-      "impact": "Auswirkungen & Ergebnisse",
       "joinProject": "Projekt Beitreten",
       "openToAll": "Offen für alle Studierenden",
       "interestedTitle": "Interessiert Mitzuwirken?",
@@ -66,7 +65,6 @@
       "albuddy": {
         "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
         "longDescription": "Das Munich ALBuddy Programm ist ein Mentoring-Netzwerk für albanische und kosovarische Studierende an der TUM, LMU und Hochschule München. Wir verbinden neue Studierende (Mentees) mit erfahrenen Mentoren, die bei allem helfen, vom Studium bis zum Finden der besten Restaurants in München.",
-        "impact": "Der Start an der Universität in einer neuen Stadt kann schwierig sein, aber du musst es nicht alleine schaffen. Unser Ziel ist es, dich mit einem freundlichen Gesicht zu verbinden, das dir bei allem helfen kann.",
         "objectives": {
           "0": {
             "title": "Mentees & Mentoren Verbinden",
@@ -101,7 +99,6 @@
       "kafeneja": {
         "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=2074&auto=format&fit=crop",
         "longDescription": "Kafeneja Jonë (Unser Café) ist ein regelmäßiges Kaffeetreffen, bei dem sich albanische Studierende treffen, um eine Pause vom Lernen zu machen, zu plaudern und sich in entspannter Atmosphäre zu vernetzen. Eine ungezwungene Möglichkeit, Freundschaften zu knüpfen und sich in München heimisch zu fühlen.",
-        "impact": "Brauchst du eine Pause vom Studium? Komm zu uns auf einen Kaffee und lerne andere albanische Studierende in lockerer Atmosphäre kennen. Perfekt, um neue Freunde zu finden und mit der Community verbunden zu bleiben.",
         "objectives": {
           "0": {
             "title": "Soziale Vernetzung",
