@@ -1,0 +1,17 @@
+---
+// Section label: the word in the page language, followed by the Albanian word.
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  text: string;
+  sq: string;
+  as?: 'p' | 'h2' | 'h3';
+}
+const { lang, text, sq, as: Tag = 'p' } = Astro.props;
+---
+
+<Tag class="label">
+  <span>{text}</span>
+  {lang !== 'sq' && <span lang="sq">{sq}</span>}
+</Tag>

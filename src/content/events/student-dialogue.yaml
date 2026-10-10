@@ -1,0 +1,47 @@
+date: 2025-11-30
+time: "15:00"
+place: TUM main campus
+address: Arcisstraße 21, 80333 München
+room: 0505.Z1.534
+capacity: 40
+
+en:
+  title: Student Dialogue
+  summary: A conversation with Prof. Dr. Albena Reshitaj.
+  body: >-
+    An open conversation with Prof. Dr. Albena Reshitaj, a professor of medicine
+    and member of parliament, about academic challenges, building expertise, and
+    what it means to study in the diaspora.
+  highlights:
+    - Questions and answers with Prof. Dr. Reshitaj
+    - Academic and career challenges
+    - Perspectives on studying in the diaspora
+  audience: Open to all students interested in academic life and studying abroad.
+
+sq:
+  place: Kampusi kryesor i TUM
+  title: Dialog studentor
+  summary: Bisedë me Prof. Dr. Albena Reshitaj.
+  body: >-
+    Një bisedë e hapur me Prof. Dr. Albena Reshitaj, nga bota e mjekësisë dhe e
+    politikës, për sfidat akademike, ndërtimin e ekspertizës dhe studimet në
+    diasporë.
+  highlights:
+    - Pyetje dhe përgjigje me Prof. Dr. Reshitaj
+    - Sfidat akademike dhe të karrierës
+    - Përvoja e studimeve në diasporë
+  audience: E hapur për të gjithë studentët që duan të flasin për jetën akademike dhe studimet jashtë vendit.
+
+de:
+  place: TUM Stammgelände
+  title: Student Dialogue
+  summary: Ein Gespräch mit Prof. Dr. Albena Reshitaj.
+  body: >-
+    Ein offenes Gespräch mit Prof. Dr. Albena Reshitaj aus Medizin und Politik
+    über akademische Herausforderungen, den Aufbau von Fachwissen und das Studium
+    in der Diaspora.
+  highlights:
+    - Fragen und Antworten mit Prof. Dr. Reshitaj
+    - Herausforderungen in Studium und Beruf
+    - Perspektiven auf das Studium in der Diaspora
+  audience: Offen für alle Studierenden, die über Studium und Leben in der Diaspora sprechen möchten.

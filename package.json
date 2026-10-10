@@ -1,29 +1,23 @@
 {
-  "name": "tum-albanian-student-society",
-  "private": true,
-  "version": "0.0.0",
+  "name": "tum-albanian-students",
   "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "prebuild": "mkdir -p public/content && cp content/*.yaml public/content/",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   },
   "dependencies": {
-    "i18next": "^25.6.3",
-    "js-yaml": "^4.1.1",
-    "lucide-react": "^0.554.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-i18next": "^16.3.5",
-    "react-router-dom": "^7.9.6"
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/besley": "^5.3.0",
+    "@fontsource-variable/ibm-plex-sans": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "astro": "^7.3.8",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
-    "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.14.0",
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3"
   }
 }

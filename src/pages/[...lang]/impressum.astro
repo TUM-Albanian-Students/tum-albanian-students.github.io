@@ -1,0 +1,134 @@
+---
+import Base from '../../layouts/Base.astro';
+import type { Lang } from '../../i18n/ui';
+import { SITE, langPaths, localPath } from '../../lib/site';
+
+export const getStaticPaths = () => langPaths();
+
+const { lang } = Astro.props as { lang: Lang };
+const RESPONSIBLE = 'Yll Kryeziu';
+const GITHUB_PRIVACY = 'https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement';
+
+const copy = {
+  en: {
+    title: 'Legal notice & privacy',
+    legal: 'Legal notice',
+    responsibleLabel: 'Responsible for this website (§ 5 DDG, § 18 (2) MStV)',
+    privacy: 'Privacy',
+    privacyText: [
+      'This website is hosted on GitHub Pages, a service of GitHub, Inc. When you open a page, GitHub processes technical data such as your IP address to deliver the site and keep it secure.',
+      'We don’t set cookies, use analytics or tracking, or load fonts or scripts from other servers.',
+      'Links to Instagram and LinkedIn take you to those services, which have their own privacy policies.',
+    ],
+    githubLink: 'GitHub’s privacy statement',
+    questions: 'Questions about your data? Write to',
+    binding: 'The German version of this page is the binding one.',
+  },
+  sq: {
+    title: 'Njoftimi ligjor & privatësia',
+    legal: 'Njoftimi ligjor',
+    responsibleLabel: 'Përgjegjës për këtë faqe (§ 5 DDG, § 18 (2) MStV)',
+    privacy: 'Privatësia',
+    privacyText: [
+      'Kjo faqe mbahet në GitHub Pages, një shërbim i GitHub, Inc. Kur hap një faqe, GitHub përpunon të dhëna teknike si adresa jote IP për ta shfaqur faqen dhe për ta mbajtur të sigurt.',
+      'Ne nuk vendosim cookies, nuk përdorim analitikë apo gjurmim dhe nuk ngarkojmë fonte ose skripte nga serverë të tjerë.',
+      'Lidhjet për Instagram dhe LinkedIn të çojnë te ato shërbime, të cilat kanë rregullat e tyre të privatësisë.',
+    ],
+    githubLink: 'Deklarata e privatësisë e GitHub',
+    questions: 'Pyetje për të dhënat e tua? Na shkruaj në',
+    binding: 'Versioni gjermanisht i kësaj faqeje është ai detyrues.',
+  },
+  de: {
+    title: 'Impressum & Datenschutz',
+    legal: 'Impressum',
+    responsibleLabel: 'Verantwortlich für diese Website (§ 5 DDG, § 18 Abs. 2 MStV)',
+    privacy: 'Datenschutz',
+    privacyText: [
+      'Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc. Beim Aufruf einer Seite verarbeitet GitHub technische Daten wie deine IP-Adresse, um die Seite auszuliefern und abzusichern.',
+      'Wir setzen keine Cookies, verwenden keine Analyse- oder Tracking-Dienste und laden keine Schriften oder Skripte von fremden Servern.',
+      'Links zu Instagram und LinkedIn führen zu diesen Diensten, für die deren eigene Datenschutzbestimmungen gelten.',
+    ],
+    githubLink: 'Datenschutzerklärung von GitHub',
+    questions: 'Fragen zu deinen Daten? Schreib uns an',
+    binding: '',
+  },
+}[lang];
+---
+
+<Base lang={lang} title={copy.title}>
+  <article class="wrap">
+    <div class="legal">
+    <h1 class="display legal-title">{copy.title}</h1>
+
+    <section>
+      <h2 class="sub">{copy.legal}</h2>
+      <p class="muted">{copy.responsibleLabel}</p>
+      <address>
+        {RESPONSIBLE}<br />
+        {SITE.name}<br />
+        <a class="link" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      </address>
+    </section>
+
+    <section>
+      <h2 class="sub">{copy.privacy}</h2>
+      {copy.privacyText.map((p) => <p>{p}</p>)}
+      <p>
+        <a class="link" href={GITHUB_PRIVACY} rel="noopener">{copy.githubLink} <span class="arrow arrow--out" aria-hidden="true">↗</span></a>
+      </p>
+      <p>
+        {copy.questions} <a class="link" href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+      </p>
+    </section>
+
+    {
+      copy.binding && (
+        <p class="muted">
+          <a class="link" href={localPath('de', '/impressum/')} hreflang="de">
+            {copy.binding}
+          </a>
+        </p>
+      )
+    }
+    </div>
+  </article>
+</Base>
+
+<style>
+  .legal {
+    display: grid;
+    gap: clamp(2.5rem, 5vw, 3.5rem);
+    max-width: 46rem;
+    padding-block: clamp(3.5rem, 9vw, 7rem);
+  }
+
+  .legal-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    text-wrap: balance;
+  }
+
+  .legal section {
+    display: grid;
+    gap: 0.9rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .sub {
+    font: 500 0.75rem/1.4 var(--mono);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  address {
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  .muted {
+    color: var(--ink-3);
+    font-size: 0.9375rem;
+  }
+</style>

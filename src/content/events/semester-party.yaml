@@ -1,0 +1,39 @@
+date: 2025-11-08
+time: "20:00"
+place: Munich
+address: Nymphenburger Straße 99, München
+
+en:
+  title: Semester Start Party
+  summary: Kicking off the winter semester together.
+  body: >-
+    An evening of music, drinks and good company to start the semester, open to
+    Albanian students and their friends.
+  highlights:
+    - A DJ and music all night
+    - Drinks and refreshments
+    - New and familiar faces from the Albanian community
+
+sq:
+  place: Mynih
+  title: Festa e fillimit të semestrit
+  summary: E nisëm semestrin e dimrit bashkë.
+  body: >-
+    Një mbrëmje me muzikë, pije dhe shoqëri të mirë për fillimin e semestrit, e
+    hapur për studentët shqiptarë dhe shokët e tyre.
+  highlights:
+    - DJ dhe muzikë gjatë gjithë mbrëmjes
+    - Pije dhe freskime
+    - Fytyra të reja dhe të njohura nga komuniteti shqiptar
+
+de:
+  place: München
+  title: Semesterstart-Party
+  summary: Gemeinsam ins Wintersemester.
+  body: >-
+    Ein Abend mit Musik, Drinks und guter Gesellschaft zum Semesterstart, offen
+    für albanische Studierende und ihre Freundinnen und Freunde.
+  highlights:
+    - DJ und Musik den ganzen Abend
+    - Getränke und Erfrischungen
+    - Neue und bekannte Gesichter aus der albanischen Community

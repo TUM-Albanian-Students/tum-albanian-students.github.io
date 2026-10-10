@@ -1,0 +1,37 @@
+# The board, in display order. Photos live in src/assets/team/ (square crops work best).
+# Leave out `photo` and the card shows the person’s initials instead.
+
+yll-kryeziu:
+  name: Yll Kryeziu
+  order: 1
+  photo: ../assets/team/yll-kryeziu.jpg
+  role:
+    en: Co-founder & President
+    sq: Bashkëthemelues & Kryetar
+    de: Mitgründer & Präsident
+
+ersjan-keri:
+  name: Ersjan Keri
+  order: 2
+  photo: ../assets/team/ersjan-keri.jpg
+  role:
+    en: Co-founder
+    sq: Bashkëthemelues
+    de: Mitgründer
+
+erin-kerciku:
+  name: Erin Kerciku
+  order: 3
+  photo: ../assets/team/erin-kerciku.jpg
+  role:
+    en: Co-founder
+    sq: Bashkëthemelues
+    de: Mitgründer
+
+altin-azizi:
+  name: Altin Azizi
+  order: 4
+  role:
+    en: Co-founder
+    sq: Bashkëthemelues
+    de: Mitgründer

@@ -1,0 +1,72 @@
+---
+import '@fontsource-variable/besley';
+import '@fontsource-variable/besley/wght-italic.css';
+import '@fontsource-variable/ibm-plex-sans';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Greeting from '../components/Greeting.astro';
+import Header from '../components/Header.astro';
+import { LANGS, ui, type Lang } from '../i18n/ui';
+import { SITE, basePath, localPath } from '../lib/site';
+
+interface Props {
+  lang: Lang;
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+}
+const { lang, title, description, noindex = false } = Astro.props;
+const t = ui[lang];
+const pageTitle = title ? `${title} · ${SITE.name}` : SITE.name;
+const desc = description ?? t.meta.description;
+const here = basePath(Astro.url.pathname);
+const url = (l: Lang) => new URL(localPath(l, here), Astro.site).href;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={desc} />
+    {noindex && <meta name="robots" content="noindex" />}
+    {
+      !noindex && (
+        <>
+          <link rel="canonical" href={url(lang)} />
+          {LANGS.map((l) => (
+            <link rel="alternate" hreflang={l} href={url(l)} />
+          ))}
+          <link rel="alternate" hreflang="x-default" href={url('en')} />
+        </>
+      )
+    }
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#fbfbf9" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title ?? SITE.name} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={url(lang)} />
+    <meta property="og:image" content={new URL('/og.png', Astro.site).href} />
+    <meta property="og:image:alt" content="The wireframe double-headed eagle of the TUM Albanian Student Society" />
+    <meta property="og:locale" content={{ en: 'en_GB', sq: 'sq_AL', de: 'de_DE' }[lang]} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t.nav.skip}</a>
+    <Greeting lang={lang} />
+    <Header lang={lang} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

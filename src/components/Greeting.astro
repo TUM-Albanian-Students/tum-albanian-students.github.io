@@ -1,0 +1,84 @@
+---
+// A one-line greeting that only appears on Albanian and Kosovar holidays.
+// The visitor's own date decides; add ?day=11-28 to the URL to preview one.
+import { ui, type Lang } from '../i18n/ui';
+import { dotted } from '../lib/site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+
+const days = [
+  { day: '02-17', sq: 'Gëzuar Ditën e Pavarësisë!', tone: 'ks' },
+  { day: '03-14', sq: 'Gëzuar Ditën e Verës!', tone: 'plain' },
+  { day: '11-22', sq: 'Gëzuar Ditën e Alfabetit!', tone: 'plain' },
+  { day: '11-28', sq: 'Gëzuar Ditën e Flamurit!', tone: 'al' },
+] as const;
+---
+
+<div class="greeting" data-greeting hidden>
+  {
+    days.map((d) => (
+      <p class="wrap greeting-line" data-day={d.day} data-tone={d.tone} hidden>
+        <strong lang="sq" set:html={dotted(d.sq)} />
+        <span>{t.greetings[d.day]}</span>
+      </p>
+    ))
+  }
+</div>
+<script is:inline>
+  (() => {
+    const q = new URLSearchParams(location.search).get('day');
+    const now = new Date();
+    const key = q && /^\d\d-\d\d$/.test(q) ? q : [now.getMonth() + 1, now.getDate()].map((n) => String(n).padStart(2, '0')).join('-');
+    const line = document.querySelector('[data-greeting] [data-day="' + key + '"]');
+    if (!line) return;
+    line.hidden = false;
+    line.parentElement.hidden = false;
+    line.parentElement.dataset.tone = line.dataset.tone;
+  })();
+</script>
+
+<style>
+  .greeting {
+    background: var(--felt);
+    color: var(--ink);
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .greeting[data-tone='al'] {
+    background: var(--gjak);
+    color: var(--paper);
+  }
+
+  .greeting[data-tone='ks'] {
+    background: var(--kaltër);
+    color: var(--paper);
+  }
+
+  .greeting-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    padding-block: 0.7rem;
+  }
+
+  .greeting-line strong {
+    font-family: var(--display);
+    font-weight: 600;
+  }
+
+  .greeting[data-tone='ks'] strong {
+    color: var(--ar);
+  }
+
+  /* On a red or blue band, red dots would vanish; keep ë in the text colour. */
+  .greeting[data-tone='al'] :global(.e-dots),
+  .greeting[data-tone='ks'] :global(.e-dots) {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+  }
+</style>

@@ -1,0 +1,286 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import { ui, type Lang } from '../../../i18n/ui';
+import { dates, dotted, isUpcoming, langPaths, localPath, localize, paragraphs } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  const events = await getCollection('events');
+  return langPaths().flatMap(({ params, props }) =>
+    events.map((entry) => ({ params: { ...params, slug: entry.id }, props: { ...props, entry } })),
+  );
+}
+
+const { lang, entry } = Astro.props as { lang: Lang; entry: Awaited<ReturnType<typeof getCollection<'events'>>>[number] };
+const t = ui[lang];
+const e = entry.data;
+const text = localize(e, lang);
+const upcoming = isUpcoming(e.date);
+const exactDay = e.date.length === 10;
+const mapUrl = e.address ? `https://www.openstreetmap.org/search?query=${encodeURIComponent(e.address)}` : undefined;
+---
+
+<Base lang={lang} title={text.title} description={text.summary}>
+  <article class="wrap detail">
+    <a class="back" href={localPath(lang, '/#events')}><span class="arrow" aria-hidden="true">←</span> {t.events.back}</a>
+
+    <header class="detail-head">
+      <p class:list={['status', { 'status--upcoming': upcoming }]}>{upcoming ? t.events.upcoming : t.events.pastTag}</p>
+      <h1 class="display detail-title" set:html={dotted(text.title)} />
+      <p class="lead detail-summary">{text.summary}</p>
+    </header>
+
+    <div class="detail-grid">
+      <aside class="facts">
+        {
+          exactDay && (
+            <p class="big-date" aria-hidden="true">
+              {dates.day(e.date)}
+            </p>
+          )
+        }
+        <dl>
+          <div>
+            <dt>{t.events.when}</dt>
+            <dd>
+              {dates.long(e.date, lang)}
+              {e.time && <span class="time">{e.time}</span>}
+            </dd>
+          </div>
+          <div>
+            <dt>{t.events.where}</dt>
+            <dd>
+              {text.place ?? e.place}
+              {e.room && <span class="address">{t.events.room(e.room)}</span>}
+              {e.address && <span class="address">{e.address}</span>}
+              {
+                mapUrl && (
+                  <a class="link map" href={mapUrl} rel="noopener">
+                    {t.events.map} <span class="arrow arrow--out" aria-hidden="true">↗</span>
+                  </a>
+                )
+              }
+            </dd>
+          </div>
+          {
+            e.capacity && (
+              <div>
+                <dt>{t.events.capacity}</dt>
+                <dd>{t.events.places(e.capacity)}</dd>
+              </div>
+            )
+          }
+        </dl>
+        {
+          upcoming && (exactDay || e.registration) && (
+            <div class="detail-actions">
+              {e.registration && (
+                <a class="button" href={e.registration} rel="noopener">
+                  {t.events.register} <span class="arrow" aria-hidden="true">→</span>
+                </a>
+              )}
+              {exactDay && (
+                <a class:list={['button', { 'button--ghost': e.registration }]} href={localPath(lang, `/events/${entry.id}.ics`)} download>
+                  {t.events.addToCalendar}
+                </a>
+              )}
+            </div>
+          )
+        }
+      </aside>
+
+      <div class="detail-body">
+        <div class="body-text">
+          {paragraphs(text.body).map((p) => <p>{p}</p>)}
+        </div>
+
+        {
+          text.highlights.length > 0 && (
+            <section>
+              <h2 class="sub">{upcoming ? t.events.expect : t.events.recap}</h2>
+              <ul role="list" class="highlights">
+                {text.highlights.map((h) => (
+                  <li>{h}</li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+
+        {
+          text.audience && (
+            <section>
+              <h2 class="sub">{t.events.audience}</h2>
+              <p class="prose">{text.audience}</p>
+            </section>
+          )
+        }
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .detail {
+    padding-block: clamp(2rem, 5vw, 3.5rem) clamp(5rem, 10vw, 8rem);
+  }
+
+  .back {
+    display: inline-flex;
+    gap: 0.5em;
+    font: 500 0.75rem/1.4 var(--mono);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-decoration: none;
+  }
+
+  .back:hover {
+    color: var(--gjak);
+  }
+
+  .back:hover .arrow {
+    transform: translateX(-4px);
+  }
+
+  .detail-head {
+    max-width: 62rem;
+    padding-block: clamp(3rem, 8vw, 6rem) clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .status {
+    font: 500 0.75rem/1.4 var(--mono);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .status--upcoming {
+    color: var(--gjak);
+  }
+
+  .detail-title {
+    margin-top: 1.25rem;
+    font-size: clamp(2.75rem, 7vw, 5.75rem);
+    text-wrap: balance;
+  }
+
+  .detail-summary {
+    margin-top: 1.5rem;
+    max-width: 40rem;
+    color: var(--ink-2);
+  }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: clamp(2.5rem, 6vw, 6rem);
+    padding-top: clamp(2rem, 5vw, 3rem);
+    border-top: 1px solid var(--ink);
+  }
+
+  .big-date {
+    font: 500 clamp(5rem, 11vw, 9rem) / 0.85 var(--display);
+    letter-spacing: -0.04em;
+    color: var(--gjak);
+    margin-bottom: 1.5rem;
+  }
+
+  .facts dl {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .facts dl > div {
+    display: grid;
+    gap: 0.3rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .facts dt,
+  .sub {
+    font: 500 0.75rem/1.4 var(--mono);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .facts dd {
+    display: grid;
+    gap: 0.2rem;
+  }
+
+  .time,
+  .address {
+    color: var(--ink-2);
+  }
+
+  .map {
+    margin-top: 0.4rem;
+    justify-self: start;
+    font-size: 0.9375rem;
+  }
+
+  .detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .detail-body {
+    display: grid;
+    gap: clamp(2.5rem, 5vw, 3.5rem);
+    align-content: start;
+  }
+
+  .body-text {
+    font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+    line-height: 1.6;
+    max-width: 40rem;
+    text-wrap: pretty;
+  }
+
+  .body-text p + p {
+    margin-top: 1em;
+  }
+
+  .highlights {
+    margin-top: 1rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .highlights li {
+    position: relative;
+    padding: 0.9rem 0 0.9rem 1.75rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* A small diamond, the basic unit of the eagle's mesh. */
+  .highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0.25rem;
+    top: 1.45rem;
+    width: 0.45rem;
+    height: 0.45rem;
+    border: 1px solid var(--gjak);
+    transform: rotate(45deg);
+  }
+
+  .detail-body .prose {
+    margin-top: 0.75rem;
+    max-width: 40rem;
+  }
+
+  @media (max-width: 860px) {
+    .detail-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .big-date {
+      display: none;
+    }
+  }
+</style>

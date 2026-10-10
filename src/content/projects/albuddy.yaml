@@ -1,0 +1,79 @@
+order: 1
+kind: mentorship
+contact: email
+emailSubject: ALBuddy
+
+en:
+  title: Munich ALBuddy Program
+  summary: >-
+    A mentoring network that pairs new Albanian and Kosovar students with
+    experienced students at TUM, LMU and Hochschule München.
+  body: >-
+    Moving to Munich for your studies comes with a lot of questions. ALBuddy pairs
+    new students (mentees) with students who have been through it (mentors), for
+    everything from choosing courses to finding the best food in the city.
+  goals:
+    - title: A mentor from day one
+      text: Every new student gets someone who already knows their way around.
+    - title: Help with your studies
+      text: Advice on choosing courses, study techniques and campus resources.
+    - title: Life in Munich
+      text: Housing, getting around, and the best places in the city.
+  steps:
+    - title: Sign up
+      text: Email us and tell us whether you’d like to be a mentee or a mentor.
+    - title: Get matched
+      text: We pair you based on your university, programme and interests.
+    - title: Meet your buddy
+      text: Meet up, ask anything, and build a connection that lasts.
+  cta: Want a mentor, or want to be one?
+
+sq:
+  title: Programi Munich ALBuddy
+  summary: >-
+    Një rrjet mentorimi që lidh studentët e rinj shqiptarë dhe kosovarë me
+    studentë me përvojë në TUM, LMU dhe Hochschule München.
+  body: >-
+    Ardhja në Mynih për studime sjell shumë pyetje. ALBuddy i lidh studentët e
+    rinj (mentees) me studentë që e kanë kaluar këtë rrugë (mentorë), për
+    gjithçka: nga zgjedhja e lëndëve deri te ushqimi më i mirë në qytet.
+  goals:
+    - title: Një mentor që nga dita e parë
+      text: Çdo student i ri ka dikë që e njeh mirë rrugën.
+    - title: Ndihmë me studimet
+      text: Këshilla për zgjedhjen e lëndëve, mënyrat e studimit dhe burimet e kampusit.
+    - title: Jeta në Mynih
+      text: Banimi, lëvizja nëpër qytet dhe vendet më të mira të tij.
+  steps:
+    - title: Regjistrohu
+      text: Na shkruaj me email dhe na trego nëse do të jesh mentee apo mentor.
+    - title: Çiftimi
+      text: Të lidhim me dikë sipas universitetit, programit dhe interesave të tua.
+    - title: Njihuni
+      text: Takohuni, pyetni çfarëdo dhe ndërtoni një lidhje që zgjat.
+  cta: Të duhet një mentor, apo do të bëhesh mentor?
+
+de:
+  title: Munich ALBuddy Program
+  summary: >-
+    Ein Mentoring-Netzwerk, das neue albanische und kosovarische Studierende mit
+    erfahrenen Studierenden an TUM, LMU und Hochschule München zusammenbringt.
+  body: >-
+    Wer zum Studium nach München zieht, hat viele Fragen. ALBuddy bringt neue
+    Studierende (Mentees) mit Studierenden zusammen, die das schon hinter sich
+    haben (Mentor:innen), von der Kurswahl bis zum besten Essen der Stadt.
+  goals:
+    - title: Vom ersten Tag an begleitet
+      text: Alle neuen Studierenden bekommen jemanden, der sich schon auskennt.
+    - title: Hilfe im Studium
+      text: Tipps zu Kurswahl, Lerntechniken und Angeboten auf dem Campus.
+    - title: Leben in München
+      text: Wohnen, Wege durch die Stadt und die besten Orte Münchens.
+  steps:
+    - title: Anmelden
+      text: Schreib uns eine E-Mail, ob du Mentee oder Mentor:in werden möchtest.
+    - title: Matching
+      text: Wir bringen euch nach Hochschule, Studiengang und Interessen zusammen.
+    - title: Buddy treffen
+      text: Trefft euch, fragt alles und baut eine Verbindung auf, die bleibt.
+  cta: Du suchst eine Mentorin oder einen Mentor, oder willst selbst eine:r sein?

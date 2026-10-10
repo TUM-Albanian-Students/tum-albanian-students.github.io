@@ -1,0 +1,141 @@
+---
+// The club's wireframe eagle. It draws itself from the chest outwards on load,
+// and the wires nearest your cursor glow red. Without JS it is a static drawing.
+import { EAGLE_LINES, EAGLE_VIEWBOX } from '../data/eagle-lines';
+
+interface Props {
+  label: string;
+}
+const { label } = Astro.props;
+---
+
+<div class="eagle" data-eagle>
+  <svg viewBox={EAGLE_VIEWBOX} role="img" aria-label={label}>
+    <path d={EAGLE_LINES}></path>
+  </svg>
+</div>
+
+<script>
+  const NS = 'http://www.w3.org/2000/svg';
+  const CENTER = { x: 314, y: 300 };
+  const RADIUS = 64;
+
+  type Wire = { el: SVGLineElement; mx: number; my: number; len: number; dist: number; hot: boolean };
+
+  function init(root: HTMLElement) {
+    const svg = root.querySelector('svg');
+    const path = svg?.querySelector('path');
+    if (!svg || !path) return;
+
+    const n = (path.getAttribute('d') ?? '').match(/-?\d+(?:\.\d+)?/g)?.map(Number) ?? [];
+    const group = document.createElementNS(NS, 'g');
+    const wires: Wire[] = [];
+    let maxDist = 1;
+
+    for (let i = 0; i + 3 < n.length; i += 4) {
+      const [x1, y1, x2, y2] = n.slice(i, i + 4);
+      const el = document.createElementNS(NS, 'line');
+      el.setAttribute('x1', String(x1));
+      el.setAttribute('y1', String(y1));
+      el.setAttribute('x2', String(x2));
+      el.setAttribute('y2', String(y2));
+      const mx = (x1 + x2) / 2;
+      const my = (y1 + y2) / 2;
+      const dist = Math.hypot(mx - CENTER.x, my - CENTER.y);
+      maxDist = Math.max(maxDist, dist);
+      wires.push({ el, mx, my, len: Math.hypot(x2 - x1, y2 - y1), dist, hot: false });
+      group.append(el);
+    }
+    path.replaceWith(group);
+    root.classList.add('is-live');
+
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      for (const w of wires) {
+        const from = { strokeDasharray: `${w.len}`, strokeDashoffset: `${w.len}` };
+        const to = { strokeDasharray: `${w.len}`, strokeDashoffset: '0' };
+        w.el.animate([from, to], {
+          duration: 900,
+          delay: (w.dist / maxDist) * 1500 + Math.random() * 200,
+          easing: 'cubic-bezier(.3,.7,.2,1)',
+          fill: 'backwards',
+        });
+      }
+    }
+
+    if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+    let px = -1e4;
+    let py = -1e4;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      for (const w of wires) {
+        const hot = (w.mx - px) ** 2 + (w.my - py) ** 2 < RADIUS * RADIUS;
+        if (hot !== w.hot) {
+          w.hot = hot;
+          w.el.classList.toggle('hot', hot);
+        }
+      }
+    };
+    root.addEventListener('pointermove', (e) => {
+      const m = svg.getScreenCTM();
+      if (!m) return;
+      const p = new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse());
+      px = p.x;
+      py = p.y;
+      frame ||= requestAnimationFrame(update);
+    });
+    root.addEventListener('pointerleave', () => {
+      px = py = -1e4;
+      frame ||= requestAnimationFrame(update);
+    });
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-eagle]').forEach(init);
+</script>
+
+<style>
+  .eagle {
+    width: 100%;
+  }
+
+  .eagle svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 1.35;
+    stroke-linecap: round;
+  }
+
+  /* While the script prepares the wires, hide the static drawing; if the script
+     never runs, show it anyway after a moment. */
+  :global(.js) .eagle:not(.is-live) path {
+    animation: eagle-fallback 0.6s 2.5s both;
+  }
+
+  @keyframes eagle-fallback {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .eagle :global(line) {
+    transition: stroke 1.1s ease-out;
+  }
+
+  .eagle :global(line.hot) {
+    stroke: var(--gjak);
+    transition-duration: 0.08s;
+  }
+
+  @media (max-width: 700px) {
+    .eagle svg {
+      stroke-width: 2;
+    }
+  }
+</style>

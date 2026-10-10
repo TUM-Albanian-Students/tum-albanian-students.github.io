@@ -1,0 +1,217 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import { ui, type Lang } from '../../../i18n/ui';
+import { SITE, dotted, langPaths, localPath, localize, paragraphs } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return langPaths().flatMap(({ params, props }) =>
+    projects.map((entry) => ({ params: { ...params, slug: entry.id }, props: { ...props, entry } })),
+  );
+}
+
+const { lang, entry } = Astro.props as { lang: Lang; entry: Awaited<ReturnType<typeof getCollection<'projects'>>>[number] };
+const t = ui[lang];
+const p = entry.data;
+const text = localize(p, lang);
+const contact =
+  p.contact === 'email'
+    ? { href: `mailto:${SITE.email}${p.emailSubject ? `?subject=${encodeURIComponent(p.emailSubject)}` : ''}`, label: t.projects.email, out: false }
+    : { href: SITE.instagram, label: t.projects.instagram, out: true };
+---
+
+<Base lang={lang} title={text.title} description={text.summary}>
+  <article class="detail">
+    <div class="wrap">
+      <a class="back" href={localPath(lang, '/#projects')}><span class="arrow" aria-hidden="true">←</span> {t.projects.back}</a>
+
+      <header class="detail-head">
+        <p class="kind">{t.projects.kinds[p.kind]}</p>
+        <h1 class="display detail-title" set:html={dotted(text.title)} />
+        <p class="lead detail-summary">{text.summary}</p>
+      </header>
+
+      <div class="intro">
+        {paragraphs(text.body).map((para) => <p>{para}</p>)}
+      </div>
+
+      <section class="block">
+        <h2 class="sub">{t.projects.goals}</h2>
+        <ul role="list" class="goals">
+          {
+            text.goals.map((g) => (
+              <li>
+                <h3 class="h3">{g.title}</h3>
+                <p class="prose">{g.text}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2 class="sub">{t.projects.steps}</h2>
+        <ol role="list" class="steps">
+          {
+            text.steps.map((s, i) => (
+              <li>
+                <span class="step-n" aria-hidden="true">
+                  {i + 1}
+                </span>
+                <div>
+                  <h3 class="h3">{s.title}</h3>
+                  <p class="prose">{s.text}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+    </div>
+
+    <section class="cta">
+      <div class="wrap cta-inner">
+        <h2 class="h2">{text.cta}</h2>
+        <a class="button" href={contact.href} rel={contact.out ? 'noopener' : undefined}>
+          {contact.label}
+          <span class:list={['arrow', { 'arrow--out': contact.out }]} aria-hidden="true">{contact.out ? '↗' : '→'}</span>
+        </a>
+      </div>
+    </section>
+  </article>
+</Base>
+
+<style>
+  .detail {
+    padding-top: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .back {
+    display: inline-flex;
+    gap: 0.5em;
+    font: 500 0.75rem/1.4 var(--mono);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-decoration: none;
+  }
+
+  .back:hover {
+    color: var(--gjak);
+  }
+
+  .back:hover .arrow {
+    transform: translateX(-4px);
+  }
+
+  .detail-head {
+    max-width: 62rem;
+    padding-block: clamp(3rem, 8vw, 6rem) clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .kind,
+  .sub {
+    font: 500 0.75rem/1.4 var(--mono);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .detail-title {
+    margin-top: 1.25rem;
+    font-size: clamp(2.75rem, 7vw, 5.75rem);
+    text-wrap: balance;
+  }
+
+  .detail-summary {
+    margin-top: 1.5rem;
+    max-width: 40rem;
+    color: var(--ink-2);
+  }
+
+  .intro {
+    padding-top: clamp(2rem, 5vw, 3rem);
+    border-top: 1px solid var(--ink);
+    font: 400 clamp(1.3rem, 2.2vw, 1.75rem) / 1.45 var(--display);
+    max-width: 52rem;
+    text-wrap: pretty;
+  }
+
+  .intro p + p {
+    margin-top: 1em;
+  }
+
+  .block {
+    margin-top: clamp(4rem, 9vw, 6.5rem);
+  }
+
+  .goals {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin-top: 1.5rem;
+  }
+
+  .goals li {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule-strong);
+  }
+
+  .goals .prose,
+  .steps .prose {
+    margin-top: 0.6rem;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin-top: 1.5rem;
+  }
+
+  .steps li {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+  }
+
+  .step-n {
+    font: 500 clamp(3.5rem, 6vw, 5rem) / 0.9 var(--display);
+    letter-spacing: -0.03em;
+    color: var(--gjak);
+  }
+
+  .cta {
+    margin-top: clamp(5rem, 10vw, 8rem);
+    padding-block: clamp(3.5rem, 8vw, 6rem);
+    background: var(--felt);
+  }
+
+  .cta-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem 3rem;
+  }
+
+  .cta .h2 {
+    max-width: 36rem;
+  }
+
+  @media (max-width: 800px) {
+    .goals,
+    .steps {
+      grid-template-columns: 1fr;
+    }
+
+    .steps li {
+      grid-template-columns: 3.5rem minmax(0, 1fr);
+    }
+
+    .step-n {
+      font-size: 3rem;
+    }
+  }
+</style>

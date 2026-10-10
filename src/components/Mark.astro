@@ -1,0 +1,13 @@
+---
+// The eagle silhouette, for small sizes. Inherits the text colour.
+import { MARK_PATH, MARK_VIEWBOX } from '../data/eagle-mark';
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<svg class={className} viewBox={MARK_VIEWBOX} aria-hidden="true" focusable="false">
+  <path fill="currentColor" fill-rule="evenodd" d={MARK_PATH}></path>
+</svg>

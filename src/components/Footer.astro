@@ -1,0 +1,165 @@
+---
+import Mark from './Mark.astro';
+import { ui, type Lang } from '../i18n/ui';
+import { DISTANCES, SITE, dotted, localPath, number } from '../lib/site';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <Mark class="footer-mark" />
+      <div>
+        <p class="proverb" lang="sq" set:html={dotted('Bashkimi bën fuqinë.')} />
+        {t.footer.proverbGloss && <p class="proverb-gloss">{t.footer.proverbGloss}</p>}
+      </div>
+    </div>
+
+    <div class="footer-grid">
+      <div>
+        <p class="footer-label">{t.footer.distanceLabel}</p>
+        <ul role="list" class="distances">
+          {
+            t.footer.cities.map((city, i) => (
+              <li>
+                <span>
+                  {t.footer.from} → {city}
+                </span>
+                <span>{number(DISTANCES[i], lang)} km</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer-label">{ui[lang].contact.label}</p>
+        <ul role="list" class="footer-links">
+          <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+          <li><a href={SITE.instagram} rel="noopener">Instagram</a></li>
+          <li><a href={SITE.linkedin} rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-legal">
+        <p>{t.footer.tagline}</p>
+        <p>© {year} {SITE.name}</p>
+        <p><a href={localPath(lang, '/impressum/')}>{t.footer.legal}</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding-block: clamp(3.5rem, 8vw, 6rem) 2.5rem;
+  }
+
+  .footer-top {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.25rem, 3vw, 2.25rem);
+    padding-bottom: clamp(2.5rem, 6vw, 4rem);
+    border-bottom: 1px solid rgb(251 251 249 / 0.14);
+  }
+
+  .footer-top :global(.footer-mark) {
+    width: clamp(56px, 8vw, 84px);
+    height: auto;
+    color: var(--gjak);
+    flex: none;
+  }
+
+  .proverb {
+    font: italic 500 clamp(1.9rem, 4.6vw, 3.4rem) / 1.05 var(--display);
+    letter-spacing: -0.015em;
+  }
+
+  .proverb-gloss {
+    margin-top: 0.6rem;
+    font: 400 0.8125rem/1.4 var(--mono);
+    color: rgb(251 251 249 / 0.6);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    padding-top: 2.5rem;
+    font-size: 0.875rem;
+  }
+
+  .footer-label {
+    margin-bottom: 0.9rem;
+    font: 500 0.7rem/1.4 var(--mono);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: rgb(251 251 249 / 0.55);
+  }
+
+  .distances,
+  .footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .distances li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 22rem;
+    font: 400 0.8125rem/1.4 var(--mono);
+    padding-bottom: 0.45rem;
+    border-bottom: 1px dotted rgb(251 251 249 / 0.2);
+  }
+
+  .site-footer a {
+    color: var(--paper);
+    text-decoration-color: rgb(251 251 249 / 0.35);
+    transition: text-decoration-color 0.2s, color 0.2s;
+  }
+
+  .site-footer a:hover {
+    text-decoration-color: var(--paper);
+  }
+
+  .footer-links a {
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-legal {
+    display: grid;
+    gap: 0.4rem;
+    align-content: start;
+    color: rgb(251 251 249 / 0.6);
+  }
+
+  .site-footer :focus-visible {
+    outline-color: var(--paper);
+  }
+
+  @media (max-width: 800px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-top {
+      align-items: flex-start;
+    }
+  }
+</style>

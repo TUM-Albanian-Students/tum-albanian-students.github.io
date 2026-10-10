@@ -1,0 +1,709 @@
+---
+import { Image } from 'astro:assets';
+import founders from '../../assets/founders.jpg';
+import Eagle from '../../components/Eagle.astro';
+import Label from '../../components/Label.astro';
+import Base from '../../layouts/Base.astro';
+import { ui, type Lang } from '../../i18n/ui';
+import { getEvents, getProjects, getTeam } from '../../lib/content';
+import { SITE, dates, dotted, langPaths, localPath } from '../../lib/site';
+
+export const getStaticPaths = () => langPaths();
+
+const { lang } = Astro.props as { lang: Lang };
+const t = ui[lang];
+const sq = ui.sq;
+const { upcoming, past } = await getEvents(lang);
+const projects = await getProjects(lang);
+const team = await getTeam(lang);
+const initials = (name: string) =>
+  name
+    .split(/\s+/)
+    .map((w) => w[0])
+    .join('');
+---
+
+<Base lang={lang}>
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="label">{t.hero.eyebrow}</p>
+      <h1 class="display hero-title" lang="sq">
+        <span set:html={dotted('Mirë se')} /><br />vini.
+      </h1>
+      {
+        t.hero.gloss && (
+          <p class="hero-gloss">
+            <span class="ipa">/ˈmiɾə sɛ ˈvini/</span> {t.hero.gloss}
+          </p>
+        )
+      }
+      <p class="lead hero-lead">{t.hero.lead}</p>
+      <div class="hero-actions">
+        <a class="button" href="#events">{t.hero.primary} <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="link" href={SITE.instagram} rel="noopener">{t.hero.secondary} <span class="arrow arrow--out" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="hero-emblem">
+      <Eagle label={t.hero.emblem} />
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap about">
+      <figure class="about-photo">
+        <Image src={founders} alt={t.about.photoAlt} width={1200} widths={[420, 640, 900, 1200]} sizes="(min-width: 900px) 40vw, 100vw" />
+        <figcaption>{t.about.caption}</figcaption>
+      </figure>
+      <div class="about-text">
+        <Label lang={lang} text={t.about.label} sq={sq.about.label} />
+        <h2 class="h2">{t.about.heading}</h2>
+        <p class="lead">{t.about.lead}</p>
+        <p class="prose">{t.about.body}</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+    <ul role="list" class="values">
+      {
+        t.about.values.map((v) => (
+          <li>
+            <p class="value-word" lang="sq">
+              {v.word}
+            </p>
+            {v.gloss && <p class="value-gloss">{v.gloss}</p>}
+            <p class="prose">{v.text}</p>
+          </li>
+        ))
+      }
+    </ul>
+    </div>
+  </section>
+
+  <section class="section" id="events">
+    <div class="wrap">
+      <header class="section-head">
+        <Label lang={lang} text={t.events.label} sq={sq.events.label} />
+        <h2 class="h2">{t.events.heading}</h2>
+      </header>
+
+      <div class="next">
+        <p class="next-label">{t.events.next}</p>
+        {
+          upcoming.length ? (
+            <ul role="list" class="next-list">
+              {upcoming.map((e) => (
+                <li class="next-card">
+                  <p class="next-date">
+                    <span class="next-day">{dates.day(e.date)}</span>
+                    <span class="next-month">{dates.monthYear(e.date, lang)}</span>
+                  </p>
+                  <div>
+                    <h3 class="h3" set:html={dotted(e.text.title)} />
+                    <p class="prose">{e.text.summary}</p>
+                    <p class="next-meta">{[e.time, e.place].filter(Boolean).join(' · ')}</p>
+                    <div class="next-actions">
+                      <a class="button" href={localPath(lang, `/events/${e.id}/`)}>
+                        {t.events.details} <span class="arrow" aria-hidden="true">→</span>
+                      </a>
+                      {e.date.length === 10 && (
+                        <a class="link" href={localPath(lang, `/events/${e.id}.ics`)} download>
+                          {t.events.addToCalendar}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div class="next-empty">
+              <p class="h3">{t.events.noneTitle}</p>
+              <p class="prose">
+                {t.events.noneText}{' '}
+                <a class="link" href={SITE.instagram} rel="noopener">
+                  {t.events.noneLink} <span class="arrow arrow--out" aria-hidden="true">↗</span>
+                </a>
+              </p>
+            </div>
+          )
+        }
+      </div>
+
+      {
+        past.length > 0 && (
+          <>
+            <h3 class="past-label">{t.events.past}</h3>
+            <ol role="list" class="ledger">
+              {past.map((e) => (
+                <li>
+                  <a class="row" href={localPath(lang, `/events/${e.id}/`)}>
+                    <span class="row-date">{dates.short(e.date, lang)}</span>
+                    <span class="row-rest">
+                      <span class="row-main">
+                        <span class="row-title" set:html={dotted(e.text.title)} />
+                        <span class="row-summary">{e.text.summary}</span>
+                      </span>
+                      <span class="row-place">{e.place}</span>
+                      <span class="arrow row-arrow" aria-hidden="true">→</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="wrap">
+      <header class="section-head">
+        <Label lang={lang} text={t.projects.label} sq={sq.projects.label} />
+        <h2 class="h2">{t.projects.heading}</h2>
+      </header>
+      <ul role="list" class="projects">
+        {
+          projects.map((p) => (
+            <li>
+              <a class="project" href={localPath(lang, `/projects/${p.id}/`)}>
+                <span class="project-kind">{t.projects.kinds[p.kind]}</span>
+                <span class="project-title" set:html={dotted(p.text.title)} />
+                <span class="prose">{p.text.summary}</span>
+                <span class="project-more">
+                  {t.projects.more} <span class="arrow" aria-hidden="true">→</span>
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="board">
+    <div class="wrap">
+      <header class="section-head">
+        <Label lang={lang} text={t.board.label} sq={sq.board.label} />
+        <div>
+          <h2 class="h2">{t.board.heading}</h2>
+          <p class="prose board-intro">{t.board.text}</p>
+        </div>
+      </header>
+      <ul role="list" class="board">
+        {
+          team.map((m) => (
+            <li class="member">
+              <div class="portrait">
+                {m.photo ? (
+                  <Image src={m.photo} alt="" width={640} widths={[320, 640]} sizes="(min-width: 900px) 280px, 45vw" />
+                ) : (
+                  <span class="initials" aria-hidden="true">
+                    {initials(m.name)}
+                  </span>
+                )}
+              </div>
+              <p class="member-name">{m.name}</p>
+              <p class="member-role">{m.roleText}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap contact">
+      <div>
+        <Label lang={lang} text={t.contact.label} sq={sq.contact.label} />
+        <h2 class="display contact-title" set:html={dotted(t.contact.heading)} />
+        <p class="lead contact-text">{t.contact.text}</p>
+      </div>
+      <dl class="contact-list">
+        <div>
+          <dt>{t.contact.email}</dt>
+          <dd><a class="contact-email" href={`mailto:${SITE.email}`}>{SITE.email}</a></dd>
+        </div>
+        <div>
+          <dt>Instagram</dt>
+          <dd>
+            <a class="link" href={SITE.instagram} rel="noopener">{SITE.instagramHandle} <span class="arrow arrow--out" aria-hidden="true">↗</span></a>
+          </dd>
+        </div>
+        <div>
+          <dt>LinkedIn</dt>
+          <dd>
+            <a class="link" href={SITE.linkedin} rel="noopener">{SITE.name} <span class="arrow arrow--out" aria-hidden="true">↗</span></a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* ---- Hero ---- */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
+    min-height: min(calc(100svh - var(--header-h)), 860px);
+    padding-block: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  .hero-title {
+    margin-top: 1.4rem;
+    font-size: clamp(4rem, 10.5vw, 9.25rem);
+    font-weight: 500;
+    line-height: 0.94;
+    letter-spacing: -0.035em;
+  }
+
+  .hero-gloss {
+    margin-top: 1.25rem;
+    font: 400 0.8125rem/1.4 var(--mono);
+    color: var(--ink-3);
+  }
+
+  .hero-gloss .ipa {
+    color: var(--ink);
+    margin-right: 0.6em;
+  }
+
+  .hero-lead {
+    max-width: 34rem;
+    margin-top: 2rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.75rem;
+    margin-top: 2.25rem;
+  }
+
+  .hero-emblem {
+    justify-self: end;
+    width: min(100%, 580px);
+  }
+
+  /* ---- Section head: label in the margin, heading beside it ---- */
+  .section-head {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 9fr);
+    gap: 1rem clamp(1.5rem, 4vw, 3rem);
+    align-items: baseline;
+    margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+  .section-head .label {
+    padding-top: 0.2rem;
+  }
+
+  /* ---- About ---- */
+  .about {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: start;
+  }
+
+  .about-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 50% 62%;
+  }
+
+  .about-photo figcaption {
+    margin-top: 0.85rem;
+    font: 400 0.8125rem/1.45 var(--mono);
+    color: var(--ink-3);
+  }
+
+  .about-text {
+    display: grid;
+    gap: 1.6rem;
+    padding-top: clamp(0rem, 3vw, 2.5rem);
+  }
+
+  .about-text .prose {
+    max-width: 38rem;
+  }
+
+  .hero + .section {
+    border-top: 1px solid var(--rule);
+  }
+
+  .values {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    margin-top: clamp(4rem, 9vw, 7rem);
+    list-style: none;
+  }
+
+  .values li {
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--ink);
+  }
+
+  .value-word {
+    font: italic 500 clamp(2rem, 3.4vw, 2.75rem) / 1 var(--display);
+    letter-spacing: -0.01em;
+  }
+
+  .value-gloss {
+    margin-top: 0.55rem;
+    font: 400 0.8125rem/1.4 var(--mono);
+    color: var(--gjak);
+  }
+
+  .values .prose {
+    margin-top: 1rem;
+    max-width: 24rem;
+  }
+
+  /* ---- Events ---- */
+  .next {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 9fr);
+    gap: 1rem clamp(1.5rem, 4vw, 3rem);
+    padding: clamp(1.75rem, 4vw, 3rem) 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .next-label,
+  .past-label {
+    font: 500 0.75rem/1.4 var(--mono);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .next-list {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .next-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
+  }
+
+  .next-date {
+    display: grid;
+    text-align: center;
+    min-width: 7rem;
+  }
+
+  .next-day {
+    font: 500 clamp(4rem, 8vw, 6rem) / 0.9 var(--display);
+    letter-spacing: -0.03em;
+    color: var(--gjak);
+  }
+
+  .next-month {
+    margin-top: 0.4rem;
+    font: 400 0.8125rem/1.3 var(--mono);
+  }
+
+  .next-card .prose {
+    margin-top: 0.5rem;
+  }
+
+  .next-meta {
+    margin-top: 0.75rem;
+    font: 400 0.8125rem/1.4 var(--mono);
+    color: var(--ink-3);
+  }
+
+  .next-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .next-empty .prose {
+    margin-top: 0.6rem;
+  }
+
+  .past-label {
+    margin-top: clamp(3rem, 7vw, 5rem);
+    margin-bottom: 1rem;
+  }
+
+  .ledger {
+    border-top: 1px solid var(--rule);
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 9fr);
+    gap: 0.5rem clamp(1.5rem, 4vw, 3rem);
+    align-items: baseline;
+    padding-block: 1.6rem;
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .row-date,
+  .row-place {
+    font: 400 0.8125rem/1.4 var(--mono);
+    color: var(--ink-3);
+  }
+
+  .row-rest {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) 1.5rem;
+    gap: 0.5rem clamp(1.5rem, 4vw, 3rem);
+    align-items: baseline;
+  }
+
+  .row-main {
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .row-title {
+    font: 500 1.5rem/1.2 var(--display);
+    transition: color 0.2s;
+  }
+
+  .row-summary {
+    color: var(--ink-2);
+  }
+
+  .row-arrow {
+    justify-self: end;
+    color: var(--ink-3);
+  }
+
+  .row:hover .row-title,
+  .row:hover .row-arrow {
+    color: var(--gjak);
+  }
+
+  /* ---- Projects ---- */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1rem, 2.5vw, 2rem);
+  }
+
+  .project {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    height: 100%;
+    padding: clamp(1.75rem, 3.5vw, 2.75rem);
+    background: var(--felt);
+    color: var(--ink);
+    text-decoration: none;
+    border-top: 2px solid var(--ink);
+    transition: border-color 0.2s;
+  }
+
+  .project:hover {
+    border-top-color: var(--gjak);
+  }
+
+  .project-kind {
+    font: 500 0.75rem/1.4 var(--mono);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .project-title {
+    font: 500 clamp(1.75rem, 3vw, 2.4rem) / 1.1 var(--display);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  .project .prose {
+    max-width: 32rem;
+  }
+
+  .project-more {
+    margin-top: 0.75rem;
+    font-weight: 500;
+  }
+
+  .project:hover .project-more {
+    color: var(--gjak);
+  }
+
+  /* ---- Board ---- */
+  .board-intro {
+    margin-top: 1.25rem;
+    max-width: 36rem;
+  }
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1rem, 2.5vw, 2rem);
+  }
+
+  .portrait {
+    aspect-ratio: 4 / 5;
+    background: var(--felt);
+    overflow: hidden;
+  }
+
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.04);
+  }
+
+  .initials {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    font: italic 500 clamp(2.5rem, 5vw, 4rem) / 1 var(--display);
+    color: var(--ink-3);
+  }
+
+  .member-name {
+    margin-top: 1rem;
+    font: 500 1.25rem/1.25 var(--display);
+  }
+
+  .member-role {
+    margin-top: 0.25rem;
+    font: 400 0.8125rem/1.4 var(--mono);
+    color: var(--ink-3);
+  }
+
+  /* ---- Contact ---- */
+  .contact {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: clamp(2.5rem, 6vw, 6rem);
+    align-items: end;
+  }
+
+  .contact-title {
+    margin-top: 1.5rem;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+  }
+
+  .contact-text {
+    margin-top: 1.75rem;
+    max-width: 34rem;
+  }
+
+  .contact-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .contact-list > div {
+    display: grid;
+    gap: 0.35rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .contact-list dt {
+    font: 500 0.75rem/1.4 var(--mono);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .contact-email {
+    font: 500 clamp(1.25rem, 2.2vw, 1.6rem) / 1.25 var(--display);
+    color: var(--ink);
+    text-decoration-color: var(--gjak);
+    text-decoration-thickness: 2px;
+    overflow-wrap: anywhere;
+    transition: color 0.2s;
+  }
+
+  .contact-email:hover {
+    color: var(--gjak);
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: 0;
+    }
+
+    .hero-emblem {
+      justify-self: center;
+      width: min(80%, 380px);
+      order: -1;
+    }
+
+    .section-head,
+    .next {
+      grid-template-columns: 1fr;
+    }
+
+    .about,
+    .contact {
+      grid-template-columns: 1fr;
+    }
+
+    .about-photo {
+      max-width: 520px;
+    }
+
+    .values {
+      grid-template-columns: 1fr;
+    }
+
+    .board {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .row,
+    .row-rest {
+      grid-template-columns: minmax(0, 1fr) 1.5rem;
+    }
+
+    .row-date,
+    .row-rest {
+      grid-column: 1 / -1;
+    }
+
+    .row-place {
+      grid-column: 1;
+    }
+
+    .row-arrow {
+      grid-row: 1;
+      grid-column: 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .projects {
+      grid-template-columns: 1fr;
+    }
+
+    .next-card {
+      grid-template-columns: 1fr;
+    }
+
+    .next-date {
+      text-align: left;
+    }
+  }
+</style>

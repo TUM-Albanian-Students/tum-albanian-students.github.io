@@ -1,0 +1,79 @@
+order: 2
+kind: social
+contact: instagram
+
+en:
+  title: "Kafeneja Jonë: coffee & chats"
+  summary: >-
+    Regular coffee meetups to take a break from studying and meet other Albanian
+    students.
+  body: >-
+    Kafeneja Jonë means “our café”. We meet regularly for coffee to take a break
+    from studying, talk, and get to know each other. It’s the easiest way to meet
+    the community and feel a little more at home in Munich.
+  goals:
+    - title: Meet people
+      text: A relaxed place to meet other Albanian students.
+    - title: Feel at home
+      text: Friendships and a sense of belonging, far from home.
+    - title: A regular spot
+      text: A fixed meetup the community can count on.
+  steps:
+    - title: Check Instagram
+      text: We announce the date and the café on Instagram.
+    - title: Show up
+      text: Come along. No sign-up needed.
+    - title: Order a macchiato
+      text: Or whatever you like. Find the group and say hi.
+  cta: See when the next coffee is.
+
+sq:
+  title: "Kafeneja Jonë: kafe & muhabet"
+  summary: >-
+    Takime të rregullta me kafe për të bërë një pushim nga mësimi dhe për t’u
+    njohur me studentë të tjerë shqiptarë.
+  body: >-
+    Takohemi rregullisht për kafe, për të bërë një pushim nga mësimi, për të
+    biseduar dhe për t’u njohur me njëri-tjetrin. Është mënyra më e lehtë për ta
+    njohur komunitetin dhe për t’u ndier pak më shumë si në shtëpi në Mynih.
+  goals:
+    - title: Njihu me njerëz
+      text: Një vend i qetë për t’u njohur me studentë të tjerë shqiptarë.
+    - title: Si në shtëpi
+      text: Miqësi dhe ndjenjë përkatësie, larg shtëpisë.
+    - title: Një takim i rregullt
+      text: Një takim i përhershëm ku komuniteti mund të mbështetet.
+  steps:
+    - title: Shiko Instagramin
+      text: Datën dhe kafenenë i njoftojmë në Instagram.
+    - title: Eja
+      text: Thjesht eja. Nuk ka nevojë për regjistrim.
+    - title: Porosit një makiato
+      text: Ose çfarë të duash. Gjeje grupin dhe thuaj një përshëndetje.
+  cta: Shiko kur është kafja e radhës.
+
+de:
+  title: "Kafeneja Jonë: Kaffee & Gespräche"
+  summary: >-
+    Regelmäßige Kaffeetreffen, um eine Lernpause zu machen und andere albanische
+    Studierende kennenzulernen.
+  body: >-
+    Kafeneja Jonë heißt „unser Café“. Wir treffen uns regelmäßig auf einen
+    Kaffee, machen Pause vom Lernen, reden und lernen uns kennen. Der einfachste
+    Weg, die Community zu treffen und sich in München ein Stück mehr zu Hause zu
+    fühlen.
+  goals:
+    - title: Leute kennenlernen
+      text: Ein entspannter Ort, um andere albanische Studierende zu treffen.
+    - title: Ankommen
+      text: Freundschaften und ein Gefühl von Zugehörigkeit, weit weg von zu Hause.
+    - title: Ein fester Treffpunkt
+      text: Ein regelmäßiges Treffen, auf das sich die Community verlassen kann.
+  steps:
+    - title: Auf Instagram schauen
+      text: Datum und Café kündigen wir auf Instagram an.
+    - title: Vorbeikommen
+      text: Einfach kommen, keine Anmeldung nötig.
+    - title: Macchiato bestellen
+      text: Oder was du magst. Such die Gruppe und sag Hallo.
+  cta: Schau nach, wann der nächste Kaffee ist.
